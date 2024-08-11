@@ -1,0 +1,167 @@
+/* Section 5 Styles */
+.section5 {
+    position: relative;
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #FAF9E5; /* Fond de la section 5 */
+    z-index: 1;
+}
+
+/* Conteneur pour les images en arrière-plan */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Ligne pointillée */
+.dashed-line {
+    position: absolute;
+    top: -20px; /* Place la ligne pour qu'elle soit partiellement cachée sous la section 4 */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(
+      to right,
+      #006e54,
+      #006e54 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    z-index: 2; /* Place la ligne au-dessus du fond mais sous le reste du contenu */
+    opacity: 0.8;
+}
+
+/* Style général pour les images d'étoiles */
+.star-image {
+    position: absolute;
+    z-index: 3;
+    opacity: 0.9;
+}
+
+/* Positionnement et taille des étoiles */
+.star1 {
+    width: 31%;
+    top: -35%;
+    right: 5%;
+}
+
+.star2 {
+    width: 8%;
+    top: 0%; /* Positionnement basé sur la maquette */
+    right: 0%; /* Alignement à droite selon la maquette */
+}
+
+/* Contenu de la section */
+.section5-content {
+    position: relative;
+    z-index: 4;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style pour chaque élément de fonds */
+.funds-item {
+    margin-bottom: 40px;
+}
+
+/* Style des titres */
+.funds-title {
+    font-size: 1.8rem; /* Taille ajustée pour correspondre à la maquette */
+    font-weight: bold;
+    color: #5B3D9D; /* Couleur du texte des titres */
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-shadow: 1px 1px #000000;
+}
+
+/* Fond pour le titre Fonds Pluriannuel */
+.fonds-pluriannuel {
+    background-image: url('../Pic/fondjaune.png'); /* Image de fond pour le titre Fonds Pluriannuel */
+    background-size: contain;
+    background-position: center left; /* Positionné à gauche */
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 50%; /* Limite la largeur pour une meilleure lisibilité */
+    margin-left: 0; /* Aligné à gauche */
+}
+
+/* Style des descriptions */
+.funds-description {
+    font-size: 1.2rem; /* Taille réduite pour une meilleure apparence */
+    color: #333333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.elle-etaient-une-fois {
+    color: #5B3D9D; /* Couleur de la phrase "Elles étaient une fois" */
+}
+
+.autre-phrase {
+    color: #02A08B; /* Couleur des autres phrases */
+}
+
+/* Image de fond en bas à droite */
+.background-image-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%; /* Ajustement de la taille */
+    height: auto;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+/* Grands écrans */
+@media (min-width: 1200px) {
+    .funds-title {
+        font-size: 2rem; /* Ajustement de la taille pour grands écrans */
+    }
+
+    .funds-description {
+        font-size: 1.5rem; /* Ajustement de la taille pour grands écrans */
+    }
+
+    .background-image-right {
+        width: 35%; /* Ajuste la taille pour les grands écrans */
+    }
+}
+
+/* Écrans moyens (tablettes) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .funds-title {
+        font-size: 1.8rem;
+    }
+
+    .funds-description {
+        font-size: 1.2rem;
+    }
+
+    .background-image-right {
+        width: 30%; /* Ajuste la taille pour les écrans moyens */
+    }
+}
+
+/* Petits écrans (mobiles) */
+@media (max-width: 767px) {
+    .funds-title {
+        font-size: 1.5rem;
+    }
+
+    .funds-description {
+        font-size: 1rem;
+    }
+
+    .background-image-right {
+        width: 40%; /* Ajuste la taille pour les petits écrans */
+    }
+}

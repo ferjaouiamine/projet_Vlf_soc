@@ -1,0 +1,85 @@
+.section2 {
+  width: 100%;
+  padding: 50px 20px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  background-image: url('../Pic/Groupe_de_masques_2.png'); /* Image de fond */
+}
+
+.section2-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phrase-container {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.phrase-box {
+  padding: 20px 60px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  color: white;
+  text-align: center;
+  line-height: 1.2;
+  transform: rotate(-5deg);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.green-box {
+  background-color: #A4C33A;
+}
+
+.cyan-box {
+  background-color: #00AFA0;
+}
+
+.purple-box {
+  background-color: #662D91;
+}
+
+.phrase-box:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.question-mark.section2-question-mark {
+  /* Styles spécifiques pour la question dans la section 2 */
+  width: 93px;
+  position: absolute;
+  top: -10px;
+  right: 50px; /* Placement spécifique pour la section 2 */
+  filter: brightness(0) saturate(100%) invert(92%) sepia(100%) saturate(217%) hue-rotate(1deg) brightness(109%) contrast(104%); /* Applique un filtre pour rendre la question jaune */
+}
+
+@media (min-width: 1200px) {
+  .phrase-box {
+    font-size: 2.5rem;
+    padding: 30px 80px;
+  }
+
+  .question-mark {
+    width: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .phrase-box {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+  }
+
+  .question-mark {
+    width: 30px;
+  }
+}

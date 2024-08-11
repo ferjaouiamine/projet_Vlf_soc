@@ -1,0 +1,148 @@
+.header-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.header-bg img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  object-fit: cover;
+}
+
+/* Classes pour chaque image */
+.image1, .image2, .image3, .image4, .image5, .main-face-image {
+  position: absolute;
+  z-index: 2; /* Par défaut, au-dessus de l'arrière-plan */
+}
+
+/* Positionnement de chaque image - ajusté pour être responsive */
+.image1 {
+  height: 101%;
+  width: 65%;
+  top: 171%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image2 {
+  height: auto;
+  width: 17%;
+  top: 29%;
+  left: 97%;
+  transform: translate(-50%, -50%);
+}
+
+.image3 {
+  width: 8%;
+  top: -27%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+}
+
+.image4 {
+  width: 30%;
+  top: 101%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+      z-index: 1;
+}
+
+.image5 {
+  height: 243%;
+  width: 82%;
+  top: 178%;
+  right: 51%;
+  transform: translate(50%, -50%);
+  z-index: -1;
+}
+
+.main-face-image {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 3;
+  opacity: 1; /* Image principale toujours visible */
+}
+
+/* Ajustements spécifiques pour les éléments de texte */
+.left-text, .right-text {
+  position: absolute;
+  z-index: 5;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.left-text {
+  top: -149%;
+  left: 1%;
+  width: auto; /* Fixer la largeur */
+}
+
+.right-text {
+  top: -174%;
+  right: 1%;
+  width: auto; /* Fixer la largeur */
+}
+
+/* Responsive Styles */
+
+/* Grands écrans */
+@media (min-width: 1200px) {
+  .left-text, .right-text {
+    font-size: 3.5rem;
+  }
+  .main-face-image {
+    width: 50%;
+  }
+}
+
+/* Écrans moyens (tablettes en paysage) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .left-text, .right-text {
+    font-size: 3rem;
+  }
+
+  .main-face-image {
+    width: 40%;
+  }
+
+  .image1, .image2, .image3, .image4, .image5 {
+    display: none; /* Masquer les images pour les tablettes */
+  }
+}
+
+/* Petits écrans (mobiles) */
+@media (max-width: 767px) {
+  .left-text, .right-text {
+    font-size: 1.5rem; /* Diminution de la taille de la police pour mobile */
+    top: auto; /* Réinitialisation de la position supérieure */
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative; /* Rendre les éléments relatifs pour faciliter le positionnement */
+    text-align: center;
+    margin-top: 10px; /* Espacement entre les textes */
+  }
+
+  .right-text {
+    margin-top: 10px; /* Ajuster l'espacement entre les deux textes */
+  }
+
+  .main-face-image {
+    width: 70%; /* Augmentation de la taille de l'image principale pour remplir l'écran */
+    margin-top: 20px;
+  }
+
+  /* Masquer les images pour les mobiles */
+  .image1, .image2, .image3, .image4, .image5 {
+    display: none;
+  }
+}
