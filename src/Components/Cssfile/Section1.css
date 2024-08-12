@@ -1,6 +1,6 @@
 .section1 {
   width: 100%;
-  padding: 80px 20px;
+  padding: 60px 10px; /* Ajustement du padding pour les petits écrans */
   background-color: #FAF9E5;
   text-align: center;
   position: relative;
@@ -8,38 +8,33 @@
 }
 
 .section1-content {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
-  padding: 20px;
+  padding: 20px; /* Maintenir un padding interne pour l'alignement */
 }
 
 .main-title1 {
-  font-size: 3rem; /* Ajustez selon la maquette */
+  font-size: 2.5rem; /* Taille de police pour les grands écrans */
   color: #333333;
-  line-height: 1.4;
+  line-height: 1.3;
   font-weight: 700;
-  font-family: 'Arial', sans-serif; /* Utilisez la police de la maquette */
+  font-family: 'Arial', sans-serif;
   margin-bottom: 20px;
 }
 
-.highlight1 {
-  color: #03A895; /* Ajustez selon la maquette */
+.highlight1, .highlight-green {
+  color: #03A895;
 }
 
 .highlight-red {
   color: #e63946;
 }
 
-.highlight-green {
-  color: #03A895;
-}
-
 .highlight-black {
   color: #333;
 }
 
-/* Ligne non continue verte sur toute la largeur */
 .dashed-line {
   position: absolute;
   top: 0;
@@ -55,27 +50,25 @@
   );
 }
 
-/* Conteneur pour le texte de soutien */
 .support-text-container {
   position: relative;
   display: inline-block;
-  padding: 20px 30px;
+  padding: 15px 25px;
   background-color: #F2E8CE;
   border-radius: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .support-text {
-  font-size: 1.1rem; /* Ajustez selon la maquette */
+  font-size: 1rem;
   color: #e63946;
   line-height: 1.4;
-  font-family: 'Arial', sans-serif; /* Utilisez la police de la maquette */
-  max-width: 600px;
+  font-family: 'Arial', sans-serif;
+  max-width: 100%;
   margin: 0 auto;
 }
 
-/* Bouton de téléchargement */
 .button-container {
   margin-top: 20px;
 }
@@ -83,12 +76,12 @@
 .download-button {
   background-color: #e63946;
   color: #ffffff;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
-  font-family: 'Arial', sans-serif; /* Utilisez la police de la maquette */
+  font-size: 0.9rem;
+  font-family: 'Arial', sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -99,24 +92,22 @@
   background-color: #d62828;
 }
 
-/* Images à droite et à gauche */
 .image-right {
   position: absolute;
   top: 30%;
-  right: -50px;
-  width: 120px;
+  right: -20px; /* Ajustement pour mieux s'adapter aux petits écrans */
+  width: 80px;
   transform: translateY(-50%);
 }
 
 .image-left {
   position: absolute;
   top: 60%;
-  left: -50px;
-  width: 120px;
+  left: -20px; /* Ajustement pour mieux s'adapter aux petits écrans */
+  width: 80px;
   transform: translateY(-50%);
 }
 
-/* Animation de rotation pour l'étoile */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -130,8 +121,8 @@
   position: absolute;
   top: 15%;
   right: 20%;
-  width: 60px;
-  animation: rotate 5s linear infinite; /* Animation de rotation */
+  width: 50px;
+  animation: rotate 5s linear infinite;
 }
 
 .arrow-left {
@@ -157,8 +148,8 @@
 
 /* Grands écrans */
 @media (min-width: 1200px) {
-  .main-title {
-    font-size: 3.2rem; /* Ajustez selon la maquette */
+  .main-title1 {
+    font-size: 3rem;
   }
 
   .support-text {
@@ -166,7 +157,7 @@
   }
 
   .download-button {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 15px 30px;
   }
 
@@ -181,16 +172,16 @@
 
 /* Écrans moyens (tablettes en paysage) */
 @media (min-width: 768px) and (max-width: 1199px) {
-  .main-title {
-    font-size: 2.8rem;
+  .main-title1 {
+    font-size: 2.5rem;
   }
 
   .support-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .download-button {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 12px 25px;
   }
 
@@ -205,24 +196,40 @@
 
 /* Petits écrans (mobiles) */
 @media (max-width: 767px) {
-  .main-title {
-    font-size: 2.4rem;
+  .main-title1 {
+    font-size: 1.8rem; /* Diminution de la taille de la police pour les petits écrans */
+    line-height: 1.2;
+    margin-bottom: 15px;
   }
 
-  .download-button {
-    font-size: 0.9rem;
+  .support-text {
+    font-size: 0.8rem; /* Réduction de la taille du texte pour les petits écrans */
     padding: 10px 20px;
   }
 
+  .download-button {
+    font-size: 0.8rem; /* Réduction de la taille du bouton */
+    padding: 8px 15px;
+  }
+
   .support-text-container {
-    padding: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
   }
 
   .image-right, .image-left, .arrow-left, .etoile {
-    width: 100px;
+    width: 70px; /* Réduction de la taille des images */
   }
 
   .arrow-left {
-    width: 40px;
+    width: 30px;
+  }
+
+  .etoile {
+    width: 50px;
+  }
+
+  .section1 {
+    padding: 30px 5px; /* Réduction du padding global pour éviter l'espace blanc */
   }
 }

@@ -130,7 +130,7 @@
 .text-section p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #004d40;
+  color: #ffffff;
 }
 
 .download-button {
@@ -215,10 +215,13 @@
     font-size: 2rem;
   }
 
-  .image-overlay img {
-    width: 50%;
-    top: -50%;
-  }
+  @media (max-width: 767px) {
+    .image-overlay img {
+        width: 78%;
+        top: 21%;
+        left: 44%;
+    }
+}
 
   .user-photo img {
     width: 100px;

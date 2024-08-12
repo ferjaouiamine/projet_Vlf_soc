@@ -53,7 +53,7 @@
   top: 101%;
   left: 100%;
   transform: translate(-50%, -50%);
-      z-index: 1;
+  z-index: 1;
 }
 
 .image5 {
@@ -94,55 +94,52 @@
 }
 
 /* Responsive Styles */
-
-/* Grands écrans */
-@media (min-width: 1200px) {
-  .left-text, .right-text {
-    font-size: 3.5rem;
-  }
-  .main-face-image {
-    width: 50%;
-  }
-}
-
-/* Écrans moyens (tablettes en paysage) */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .left-text, .right-text {
-    font-size: 3rem;
+/* Petits écrans (mobiles) */
+@media (max-width: 767px) {
+  .header-section {
+    padding: 10px;
+    height: auto; /* Ajuster la hauteur pour mobiles */
+    justify-content: flex-start; /* Aligner le contenu en haut */
   }
 
   .main-face-image {
-    width: 40%;
+    width: 80%; /* Augmentation de la taille de l'image principale pour remplir l'écran */
+    max-width: 300px;
+    margin-top: 20px;
+    opacity: 0; /* Commence cachée */
+    transform: scale(0.8); /* Réduction de la taille initiale */
+  }
+
+  .left-text, .right-text {
+    font-size: 1.2rem; /* Réduire la taille du texte pour les mobiles */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    text-align: center;
+    width: 90%; /* S'assurer que le texte ne dépasse pas l'écran */
+    opacity: 0; /* Commence cachée */
   }
 
   .image1, .image2, .image3, .image4, .image5 {
-    display: none; /* Masquer les images pour les tablettes */
-  }
-}
-
-/* Petits écrans (mobiles) */
-@media (max-width: 767px) {
-  .left-text, .right-text {
-    font-size: 1.5rem; /* Diminution de la taille de la police pour mobile */
-    top: auto; /* Réinitialisation de la position supérieure */
-    left: 50%;
-    transform: translateX(-50%);
-    position: relative; /* Rendre les éléments relatifs pour faciliter le positionnement */
-    text-align: center;
-    margin-top: 10px; /* Espacement entre les textes */
+    width: 60%; /* Réduire la taille des images supplémentaires */
+    max-width: 200px; /* Limiter la taille maximale des images */
+    display: block;
+    margin: 10px auto; /* Centrer les images avec un petit espace entre elles */
+    opacity: 0.9; /* Légère transparence pour un effet esthétique */
+    position: relative;
+    transform: none; /* Supprimer toute transformation sur mobile */
   }
 
-  .right-text {
-    margin-top: 10px; /* Ajuster l'espacement entre les deux textes */
-  }
-
-  .main-face-image {
-    width: 70%; /* Augmentation de la taille de l'image principale pour remplir l'écran */
+  .image1 {
     margin-top: 20px;
   }
 
-  /* Masquer les images pour les mobiles */
-  .image1, .image2, .image3, .image4, .image5 {
-    display: none;
+  .image2, .image3, .image4, .image5 {
+    margin-top: 10px;
+  }
+
+  .header-section .extra-image {
+    display: none; /* Masquer les images supplémentaires si nécessaire */
   }
 }

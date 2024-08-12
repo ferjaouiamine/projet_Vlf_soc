@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     padding: 50px 20px;
-    background-color: #FAF9E5; /* Fond de la section 5 */
+    background-color: #FAF9E5;
     z-index: 1;
 }
 
@@ -21,18 +21,18 @@
 /* Ligne pointillée */
 .dashed-line {
     position: absolute;
-    top: -20px; /* Place la ligne pour qu'elle soit partiellement cachée sous la section 4 */
+    top: -20px;
     left: 0;
     width: 100%;
     height: 2px;
     background: repeating-linear-gradient(
       to right,
-      #006e54,
-      #006e54 5px,
+      #006E54, 
+      #006E54 5px,
       transparent 5px,
       transparent 10px
     );
-    z-index: 2; /* Place la ligne au-dessus du fond mais sous le reste du contenu */
+    z-index: 2;
     opacity: 0.8;
 }
 
@@ -51,9 +51,9 @@
 }
 
 .star2 {
-    width: 8%;
-    top: 0%; /* Positionnement basé sur la maquette */
-    right: 0%; /* Alignement à droite selon la maquette */
+    width: 7%;
+    top: 0%;
+    right: 3%;
 }
 
 /* Contenu de la section */
@@ -63,50 +63,48 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /* Style pour chaque élément de fonds */
 .funds-item {
     margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* Style des titres */
-.funds-title {
-    font-size: 1.8rem; /* Taille ajustée pour correspondre à la maquette */
-    font-weight: bold;
-    color: #5B3D9D; /* Couleur du texte des titres */
-    padding: 10px 20px;
+/* Background image specific to 'Fonds Pluriannuel' */
+.fondjaune {
+    position: absolute;
+    top: -13px;
+    left: -9px;
+    width: 32%;
+    height: auto;
+    z-index: 1;
+}
+
+/* Style des images de titres */
+.funds-title-image {
+    position: relative;
+    z-index: 2; 
+    width: auto;
+    max-width: 300px;
+    height: auto;
     margin-bottom: 20px;
-    border-radius: 5px;
-    text-shadow: 1px 1px #000000;
 }
 
-/* Fond pour le titre Fonds Pluriannuel */
-.fonds-pluriannuel {
-    background-image: url('../Pic/fondjaune.png'); /* Image de fond pour le titre Fonds Pluriannuel */
-    background-size: contain;
-    background-position: center left; /* Positionné à gauche */
-    background-repeat: no-repeat;
-    padding: 10px 20px;
-    display: inline-block;
-    width: 50%; /* Limite la largeur pour une meilleure lisibilité */
-    margin-left: 0; /* Aligné à gauche */
-}
-
-/* Style des descriptions */
-.funds-description {
-    font-size: 1.2rem; /* Taille réduite pour une meilleure apparence */
-    color: #333333;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.elle-etaient-une-fois {
-    color: #5B3D9D; /* Couleur de la phrase "Elles étaient une fois" */
-}
-
-.autre-phrase {
-    color: #02A08B; /* Couleur des autres phrases */
+/* Style des images de descriptions */
+.funds-description-image {
+    position: relative;
+    z-index: 2;
+    width: auto;
+    max-width: 600px;
+    height: auto;
 }
 
 /* Image de fond en bas à droite */
@@ -114,7 +112,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 30%; /* Ajustement de la taille */
+    width: 30%;
     height: auto;
     z-index: 1;
     opacity: 0.8;
@@ -123,45 +121,57 @@
 /* Responsive Design */
 /* Grands écrans */
 @media (min-width: 1200px) {
-    .funds-title {
-        font-size: 2rem; /* Ajustement de la taille pour grands écrans */
+    .funds-title-image {
+        max-width: 350px;
     }
 
-    .funds-description {
-        font-size: 1.5rem; /* Ajustement de la taille pour grands écrans */
+    .funds-description-image {
+        max-width: 650px;
     }
 
     .background-image-right {
-        width: 35%; /* Ajuste la taille pour les grands écrans */
+        width: 35%;
     }
 }
 
 /* Écrans moyens (tablettes) */
 @media (min-width: 768px) and (max-width: 1199px) {
-    .funds-title {
-        font-size: 1.8rem;
+    .funds-title-image {
+        max-width: 300px;
     }
 
-    .funds-description {
-        font-size: 1.2rem;
+    .funds-description-image {
+        max-width: 500px;
     }
 
     .background-image-right {
-        width: 30%; /* Ajuste la taille pour les écrans moyens */
+        width: 30%;
     }
 }
 
 /* Petits écrans (mobiles) */
 @media (max-width: 767px) {
-    .funds-title {
-        font-size: 1.5rem;
+    .section5 {
+        padding: 30px 10px; /* Reduce padding for mobile */
     }
 
-    .funds-description {
-        font-size: 1rem;
+    .funds-item {
+        align-items: center;
+    }
+
+    .funds-title-image,
+    .funds-description-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .fondjaune {
+        width: 100%; /* Adjust the background width for mobile */
+        top: 0;
+        left: 0;
     }
 
     .background-image-right {
-        width: 40%; /* Ajuste la taille pour les petits écrans */
+        width: 50%;
     }
 }

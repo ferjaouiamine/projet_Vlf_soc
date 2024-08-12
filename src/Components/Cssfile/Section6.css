@@ -1,11 +1,13 @@
+/* Section 6 Styles */
 .section6 {
     position: relative;
     width: 100%;
-    padding: 50px 20px;
-    background-color: #8770B9; /* Couleur de fond principale */
+    padding: 40px 20px;
+    background-color: #8770B9;
     overflow: hidden;
+    height: 100vh; /* Full viewport height for desktop */
 }
-  
+
 .background-image-container {
     position: absolute;
     top: 0;
@@ -18,103 +20,123 @@
 
 .background-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    opacity: 0.6; /* Transparence pour que la couleur de fond soit visible */
+    opacity: 0.6;
 }
 
 .section6-content {
-    position: relative;
     z-index: 2;
-    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     color: white;
 }
 
-.title-container {
-    margin-bottom: 30px;
-}
-
-.main-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    position: relative;
-    text-shadow: 2px 2px #000000; /* Amélioration de l'apparence avec une ombre légère */
-}
-
-.highlight-yellow {
-    color: #FFD700; /* Jaune pour "Comment" */
-    text-shadow: 7px 8px #5B3D9D; /* Ombre plus marquée pour donner du relief */
-}
-
-.highlight-white {
-    color: #FFFFFF; /* Blanc pour "elles ont" */
-    text-shadow: 2px 2px #5B3D9D; /* Ombre du texte */
-}
-
-.highlight-tunisie {
-    color: #8770B9;
-    text-shadow: 1px 1px 6px #FFFFFF;
-}
-
-.questionmarkjaunne {
-    width: 93px;
+/* Title Images */
+.comment-title {
     position: absolute;
-    top: -10px;
-    right: 281px;
+    top: 10%;
+    left: 15%;
+    width: 20%; 
 }
 
-.description-container {
-    margin-top: 20px;
+.ellesont-title {
+    position: absolute;
+    top: 20%; 
+    left: 30%;
+    width: 20%; 
 }
 
-.description-text {
-    font-size: 1.5rem;
-    color: #FFFFFF; /* Couleur du texte des descriptions */
-    line-height: 1.5;
-    max-width: 800px;
-    margin: 0 auto;
-    text-shadow: 1px 1px #5B3D9D; /* Ajout d'une légère ombre pour améliorer la lisibilité */
+.tunisie-title {
+    position: absolute;
+    top: 32%; 
+    left: 15%;
+    width: 45%; 
 }
 
-.decoration-container {
-    position: relative;
-    margin-top: 30px;
+.question-mark-section6 {  
+    position: absolute;
+    top: 5%;
+    right: 40%;
+    width: 10%; 
 }
 
-.section6-star {
+/* Description Images */
+.description1 {
+    position: absolute;
+    bottom: 50%; 
+    left: 15%;
+    width: 50%; 
+}
+
+.description2 {
+    position: absolute;
+    bottom: 40%; 
+    left: 15%;
+    width: 50%; 
+}
+
+/* Decoration Images */
+.star {
     position: absolute;
     left: 10%;
-    top: -98px;
-    width: 40px;
-    filter: hue-rotate(50deg) saturate(4) brightness(1.2);
+    top: 45%; 
+    width: 3%; 
 }
 
-.flower-image {
+.flower {
     position: absolute;
-    right: 87%;
-    bottom: 129px;
-    width: 40px;
-    filter: hue-rotate(256deg) saturate(4) brightness(1.2);
+    left: 10%;
+    top: 55%; 
+    width: 3%; 
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
-    .main-title {
-        font-size: 2rem;
+    .section6 {
+        padding: 20px 10px;
+        height: 100%; /* Adjust height to content size */
     }
 
-    .description-text {
-        font-size: 1.2rem;
+    .comment-title {
+        width: 70%;
+        top: 10%;
+        left: 15%;
     }
 
-    .questionmarkjaunne {
-        width: 40px;
+    .ellesont-title {
+        width: 70%;
+        top: 30%;
+        left: 15%;
     }
 
-    .section6-star, .flower-image {
-        width: 30px;
+    .tunisie-title {
+        width: 80%;
+        top: 50%;
+        left: 10%;
+    }
+
+    .question-mark-section6 {
+        width: 20%;
+        top: 60%;
+        right: 10%;
+    }
+
+    .description1, .description2 {
+        width: 90%;
+        left: 5%;
+        top: 70%;
+    }
+
+    .star {
+        width: 10%;
+        left: 20%;
+        top: 80%;
+    }
+
+    .flower {
+        width: 10%;
+        left: 60%;
+        top: 85%;
     }
 }

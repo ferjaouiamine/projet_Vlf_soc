@@ -1,19 +1,27 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './Cssfile/Section5.css'; // Assurez-vous que le chemin est correct
+import './Cssfile/Section5.css'; 
 
-// Importez les images nécessaires
+// Import the necessary images
 import starImage1 from './Pic/star1.png'; 
 import starImage2 from './Pic/star2.png'; 
 import backgroundImageRight from './Pic/123.png'; 
-import fondJaune from './Pic/fondjaune.png'; 
+import fondjaunne from './Pic/fondjaune.png'; 
+
+import fondPluriannuelImage from './Pic/Fonds Pluriannuel.png'; 
+import fondReacitifImage from './Pic/Fonds Réactif.png'; 
+import fondInnovationImage from './Pic/Fonds Innovation.png'; 
+
+import description1Image from './Pic/description1.png'; 
+import description2Image from './Pic/description2.png'; 
+import description3Image from './Pic/description3.png'; 
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Section5 = () => {
   useEffect(() => {
-    // Animation pour chaque élément de la section 5
     gsap.fromTo('.funds-item', 
       { opacity: 0, y: 50 }, 
       {
@@ -31,7 +39,6 @@ const Section5 = () => {
       }
     );
 
-    // Ajoutez l'effet de zoom à l'image de fond à droite
     gsap.fromTo('.background-image-right', 
       { scale: 1 }, 
       { 
@@ -57,33 +64,20 @@ const Section5 = () => {
       </div>
       <div className="section5-content">
         <div className="funds-item">
-          <h2 className="funds-title" style={{ backgroundImage: `url(${fondJaune})` }}>Fonds Pluriannuel</h2>
-          <p className="funds-description elle-etaient-une-fois">
-            Elles étaient une fois des associations tunisiennes qui partageaient leurs expériences et renforçaient leurs structures.
-          </p>
-          <p className="funds-description autre-phrase">
-            Avec ce fonds, elles visent à fortifier la gestion des organisations de défense des droits des femmes (ODDF), assurant ainsi leur pérennité.
-          </p>
+        <img src={fondjaunne} alt="fondjaune" className="fondjaune" />
+
+          <img src={fondPluriannuelImage} alt="Fonds Pluriannuel" className="funds-title-image" />
+          <img src={description1Image} alt="Description 1" className="funds-description-image" />
         </div>
 
         <div className="funds-item">
-          <h2 className="funds-title green-background">Fonds Réactif</h2>
-          <p className="funds-description">
-            En réponse à des crises, ces associations ont démontré leur résilience en équipant, sensibilisant et formant.
-          </p>
-          <p className="funds-description autre-phrase">
-            Ce fonds réactif booste les réseaux de droits des femmes, influençant les politiques et institutions en Tunisie.
-          </p>
+          <img src={fondReacitifImage} alt="Fonds Réactif" className="funds-title-image" />
+          <img src={description2Image} alt="Description 2" className="funds-description-image" />
         </div>
 
         <div className="funds-item">
-          <h2 className="funds-title red-background">Fonds Innovation</h2>
-          <p className="funds-description">
-            Ces associations pionnières ont conservé la mémoire féministe, diffusé l’information et encouragé l’entrepreneuriat et l’accès à la justice.
-          </p>
-          <p className="funds-description autre-phrase">
-            Le fonds innovation soutient la défense des droits des femmes pour avancer vers l’égalité.
-          </p>
+          <img src={fondInnovationImage} alt="Fonds Innovation" className="funds-title-image" />
+          <img src={description3Image} alt="Description 3" className="funds-description-image" />
         </div>
       </div>
     </section>

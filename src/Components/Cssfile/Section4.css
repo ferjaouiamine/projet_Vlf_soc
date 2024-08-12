@@ -1,9 +1,8 @@
-/* Section4.css */
 .section4 {
     position: relative;
     width: 100%;
+    height: 60vh; /* Full viewport height */
     overflow: hidden;
-    padding: 0;
     background-color: #faf9e5;
 }
 
@@ -14,13 +13,17 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    overflow: hidden;
 }
 
 .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    z-index: 0;
+    opacity: 0.6;
 }
 
 .duration-objective-container {
@@ -31,80 +34,127 @@
     padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    z-index: 2; /* Assurez-vous que les images sont au-dessus du fond */
+    z-index: 2;
 }
 
-/* CSS pour l'image Durée */
 .duration-image {
-    width: 25%; /* Taille ajustée pour l'image Durée */
+    width: 40%;  
     height: auto;
     margin-right: 20px;
-    z-index: 0; /* Assurez-vous qu'elle est au-dessus des autres images */
+    z-index: 5;
+    position: absolute;
+    top: 22%;
+    left: 10%;
 }
 
-/* CSS pour l'image Sablier */
 .hourglass-image {
-    width: 10%; /* Taille ajustée pour l'image Sablier */
+    width: 15%;
     position: absolute;
-    top: 0%; /* Ajustez selon la maquette */
-    left: 15%; /* Positionnement à gauche */
-    z-index: 2; /* Au-dessus du fond, en dessous de l'image Durée */
+    top: 127%;
+    left: -1%;
+    z-index: 5;
 }
 
-/* CSS pour l'image Main */
 .hand-image {
-    width: 18%; /* Taille ajustée pour l'image Main */
+    width: 12%;
     position: absolute;
-    top: 50%; /* Ajustement pour correspondre à la maquette */
-    right: -2%; /* Aligné à droite */
-    z-index: 2; /* Au-dessus du fond */
+    top: 171%;
+    left: 86%;
+    z-index: 0;
 }
 
-/* Responsive Design pour les écrans larges */
+/* Added images */
+.r3ad-image {
+    position: absolute;
+    width: 18%;
+    top: 154%;
+    left: -13%;
+    z-index: 4;
+}
+
+.cotet-image {
+    position: absolute;
+    width: 15%;
+    top: 55%;
+    left: 75%;
+    z-index: 3;
+}
+
+/* Responsive Design for Larger Screens */
 @media (min-width: 1200px) {
-    .duration-image {
-        width: 20%; /* Taille plus grande pour grands écrans */
+    .r3ad-image {
+        width: 18%;
     }
 
-    .hourglass-image {
-        width: 66%; /* Ajusté pour grands écrans */
-    }
-
-    .hand-image {
-        width: 15%; /* Ajusté pour grands écrans */
+    .cotet-image {
+        width: 15%;
     }
 }
 
-/* Responsive Design pour les écrans moyens */
+/* Responsive Design for Medium Screens */
 @media (min-width: 768px) and (max-width: 1199px) {
+    .section4 {
+        height: 20vh; /* Adjusted height for mobile screens */
+    }
     .duration-image {
-        width: 18%; /* Ajustement de la taille pour écrans moyens */
+        width: 30%; /* Adjusting size for medium screens */
     }
 
     .hourglass-image {
-        width: 12%; /* Ajustement pour écrans moyens */
+        width: 20%;
+        top: 130%; /* Adjusting positioning for medium screens */
     }
 
     .hand-image {
-        width: 20%; /* Ajustement pour écrans moyens */
+        width: 20%;
+        top: 180%;
+    }
+
+    .r3ad-image {
+        width: 22%;
+        top: 160%;
+    }
+
+    .cotet-image {
+        width: 20%;
+        top: 60%;
+        left: 70%;
     }
 }
 
-/* Responsive Design pour les petits écrans */
 @media (max-width: 767px) {
-    .duration-objective-container {
-        flex-direction: column; /* Les images se placent les unes sous les autres sur petits écrans */
-        align-items: center; /* Centrage des images */
-    }
-
     .duration-image {
-        width: 60%; /* Ajustement pour petits écrans */
-        margin-bottom: 20px; /* Ajout d'espace sous l'image */
+        width: 70%;  /* Adjust size for mobile screens */
+        position: static;
+        margin-bottom: 20px;
     }
 
-    .hourglass-image, .hand-image {
-        width: 50%; /* Taille plus petite pour les petits écrans */
-        position: static; /* Supprime le positionnement absolu pour l'alignement vertical */
-        margin-bottom: 20px; /* Ajout d'espace sous chaque image */
+    .hourglass-image {
+        width: 34%;  /* Adjust size for mobile screens */
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .hand-image {
+        width: 40%;  /* Adjust size for mobile screens */
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .r3ad-image {
+        width: 50%;  /* Adjust size for mobile screens */
+        position: static;
+        margin-bottom: 20px;
+        display: none; /* Keep hidden on mobile */
+    }
+
+    .cotet-image {
+        width: 50%;  /* Adjust size for mobile screens */
+        position: static;
+        margin-bottom: 20px;
+        display: none; /* Keep hidden on mobile */
     }
 }
+
+
+

@@ -78,25 +78,27 @@
 @media (max-width: 767px) {
   .navbar {
     padding: 10px 15px;
+    justify-content: center; /* Centre les éléments pour les petits écrans */
   }
 
   .navbar-links {
-    flex-direction: column;
+    flex-direction: column; /* Empile les liens verticalement */
     gap: 20px;
+    align-items: center; /* Centre les liens */
   }
 
   .navbar-links li a {
     font-size: 1rem;
+    text-align: center;
   }
 
   .navbar-left {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+    display: none; /* Masquer le bouton VLF sur mobile */
   }
 
   .vlf-button {
     left: 50%;
     transform: translateX(-50%); /* Centre le bouton pour les petits écrans */
+    font-size: 1.3rem; /* Réduire la taille du texte pour s'adapter à l'écran */
   }
 }

@@ -1,106 +1,66 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './Cssfile/Section6.css'; // Assurez-vous que le chemin est correct
+import './Cssfile/Section6.css'; // Ensure the path to your CSS file is correct
 
-// Importez les images nécessaires
-import backgroundImage from './Pic/GettyImages-1016194666-3.png'; // Assurez-vous que le chemin est correct
-import questionMarkImage from './Pic/élément1jaunne.png'; // Assurez-vous que le chemin est correct
-import starImage from './Pic/starpetit.png'; // Assurez-vous que le chemin est correct
-import flowerImage from './Pic/Groupe 67.png'; // Assurez-vous que le chemin est correct
+// Import the necessary images
+import backgroundImage from './Pic/GettyImages-1016194666-3.png';
+import questionMarkImage from './Pic/élément1jaunne.png';
+import starImage from './Pic/starpetit.png';
+import flowerImage from './Pic/Groupe 67.png';
+import titleCommentImage from './Pic/Comment.png';
+import titleEllesOntImage from './Pic/elles ont.png';
+import titleFaitEvoluerImage from './Pic/fait évoluer la Tunisie.png';
+import descriptions1s6Image from './Pic/description1s6.png';
+import descriptions2s6Image from './Pic/descriptions2s6.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Section6 = () => {
   useEffect(() => {
-    // Animation pour chaque partie du titre avec un décalage de temps plus important
-    gsap.fromTo('.highlight-yellow',
-      { opacity: 0, x: -100 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.section6',
-          start: 'top 80%',
-          end: 'bottom 50%',
-          scrub: true,
-        },
-      }
+    // Animations for title images with rotation and stagger
+    gsap.fromTo('.comment-title', 
+      { opacity: 0, y: -100, rotation: -10 }, 
+      { opacity: 1, y: 0, rotation: 0, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 80%', end: 'bottom 60%', scrub: true }, stagger: 0.2 }
     );
 
-    gsap.fromTo('.highlight-white',
-      { opacity: 0, x: 100 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 2,
-        stagger: 0.4,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.section6',
-          start: 'top 70%',
-          end: 'bottom 50%',
-          scrub: true,
-        },
-      }
+    gsap.fromTo('.ellesont-title', 
+      { opacity: 0, y: -100, rotation: -10 }, 
+      { opacity: 1, y: 0, rotation: 0, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 80%', end: 'bottom 60%', scrub: true }, stagger: 0.3 }
     );
 
-    gsap.fromTo('.highlight-tunisie',
-      { opacity: 0, y: 100 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.section6',
-          start: 'top 60%',
-          end: 'bottom 40%',
-          scrub: true,
-        },
-      }
+    gsap.fromTo('.tunisie-title', 
+      { opacity: 0, y: -100, rotation: -10 }, 
+      { opacity: 1, y: 0, rotation: 0, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 80%', end: 'bottom 60%', scrub: true }, stagger: 0.4 }
     );
 
-    // Animation pour le point d'interrogation
-    gsap.fromTo('.question-mark',
-      { opacity: 0, scale: 0.8, rotation: 200 },
-      {
-        opacity: 1,
-        scale: 1,
-        rotation: -5,
-        duration: 3,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.section6',
-          start: 'top 50%',
-          end: 'bottom 40%',
-          scrub: true,
-        },
-      }
+    // Animation for the question mark with rotation
+    gsap.fromTo('.question-mark-section6', 
+      { opacity: 0, scale: 0.8, rotation: 180 }, 
+      { opacity: 1, scale: 1, rotation: 0, duration: 3, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 70%', end: 'bottom 60%', scrub: true } }
     );
 
-    // Animation pour la description
-    gsap.fromTo('.description-text',
-      { opacity: 0, x: -100 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 2.5,
-        stagger: 0.4, // Ajoute un délai plus long entre chaque phrase
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.section6',
-          start: 'top 50%',
-          end: 'bottom 40%',
-          scrub: true,
-        },
-      }
+    // Animations for description images with slight movement
+    gsap.fromTo('.description1', 
+      { opacity: 0, x: -100 }, 
+      { opacity: 1, x: 0, duration: 2.5, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 60%', end: 'bottom 50%', scrub: true } }
     );
 
-    // Animation pour les décorations
-   
+    gsap.fromTo('.description2', 
+      { opacity: 0, x: 100 }, 
+      { opacity: 1, x: 0, duration: 2.5, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 60%', end: 'bottom 50%', scrub: true } }
+    );
+
+    // Animations for decorative elements with rotation
+    gsap.fromTo('.star', 
+      { opacity: 0, scale: 0.8, rotation: -45 }, 
+      { opacity: 1, scale: 1, rotation: 0, duration: 3, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 70%', end: 'bottom 60%', scrub: true } }
+    );
+
+    gsap.fromTo('.flower', 
+      { opacity: 0, scale: 0.8, rotation: 45 }, 
+      { opacity: 1, scale: 1, rotation: 0, duration: 3, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 70%', end: 'bottom 60%', scrub: true } }
+    );
   }, []);
 
   return (
@@ -110,26 +70,18 @@ const Section6 = () => {
       </div>
       <div className="section6-content">
         <div className="title-container">
-          <h1 className="main-title">
-            <span className="highlight-yellow">Comment</span>
-            <br />
-            <span className="highlight-white">elles ont</span>
-            <br />
-            <span className="highlight-tunisie">fait évoluer la tunisie</span>
-            <img src={questionMarkImage} alt="Question Mark" className="question-mark" />
-          </h1>
+          <img src={titleCommentImage} alt="Comment" className="comment-title" />
+          <img src={titleEllesOntImage} alt="Elles Ont" className="ellesont-title" />
+          <img src={titleFaitEvoluerImage} alt="Fait Evoluer la Tunisie" className="tunisie-title" />
+          <img src={questionMarkImage} alt="Question Mark" className="question-mark-section6" />
         </div>
         <div className="description-container">
-          <p className="description-text">
-            des activités ont été mises en œuvre pour favoriser la créativité et l’esprit communautaire
-          </p>
-          <p className="description-text">
-            améliorer la jouissance de droits humains pour les femmes et les filles et faire progresser l’égalité entre les sexes en Tunisie
-          </p>
+          <img src={descriptions1s6Image} alt="Description 1" className="description1" />
+          <img src={descriptions2s6Image} alt="Description 2" className="description2" />
         </div>
         <div className="decoration-container">
-          <img src={starImage} alt="Star" className="star-image section6-star" />
-          <img src={flowerImage} alt="Flower" className="flower-image" />
+          <img src={starImage} alt="Star" className="star" />
+          <img src={flowerImage} alt="Flower" className="flower" />
         </div>
       </div>
     </section>
