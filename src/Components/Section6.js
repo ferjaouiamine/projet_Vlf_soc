@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './Cssfile/Section6.css'; // Ensure the path to your CSS file is correct
+import './Cssfile/Section6.css';
 
-// Import the necessary images
+// Import necessary images
 import backgroundImage from './Pic/GettyImages-1016194666-3.png';
 import questionMarkImage from './Pic/élément1jaunne.png';
 import starImage from './Pic/starpetit.png';
@@ -18,49 +18,112 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section6 = () => {
   useEffect(() => {
-    // Animations for title images with rotation and stagger
-    gsap.fromTo('.comment-title', 
-      { opacity: 0, y: -100, rotation: -10 }, 
-      { opacity: 1, y: 0, rotation: 0, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 80%', end: 'bottom 60%', scrub: true }, stagger: 0.2 }
-    );
+    // General parallax effect for the background
+    gsap.to('.background-image', {
+      yPercent: -20,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.section6',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      },
+    });
 
-    gsap.fromTo('.ellesont-title', 
-      { opacity: 0, y: -100, rotation: -10 }, 
-      { opacity: 1, y: 0, rotation: 0, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 80%', end: 'bottom 60%', scrub: true }, stagger: 0.3 }
-    );
+    // Titles Animations: Slide in with rotation and scaling
+    const titleAnimation = (selector, delay) => {
+      gsap.fromTo(selector, 
+        { opacity: 0, y: 50, scale: 0.9, rotation: -15 }, 
+        { 
+          opacity: 1, 
+          y: 0, 
+          scale: 1, 
+          rotation: 0, 
+          duration: 1.5, 
+          ease: 'power3.out', 
+          scrollTrigger: {
+            trigger: selector,
+            start: 'top 90%',
+            end: 'top 70%',
+            scrub: true,
+          },
+          delay: delay,
+        }
+      );
+    };
 
-    gsap.fromTo('.tunisie-title', 
-      { opacity: 0, y: -100, rotation: -10 }, 
-      { opacity: 1, y: 0, rotation: 0, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 80%', end: 'bottom 60%', scrub: true }, stagger: 0.4 }
-    );
+    titleAnimation('.comment-title', 0);
+    titleAnimation('.ellesont-title', 0.2);
+    titleAnimation('.tunisie-title', 0.4);
 
-    // Animation for the question mark with rotation
-    gsap.fromTo('.question-mark-section6', 
-      { opacity: 0, scale: 0.8, rotation: 180 }, 
-      { opacity: 1, scale: 1, rotation: 0, duration: 3, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 70%', end: 'bottom 60%', scrub: true } }
-    );
-
-    // Animations for description images with slight movement
+    // Description Animations: Slide in from the sides
     gsap.fromTo('.description1', 
       { opacity: 0, x: -100 }, 
-      { opacity: 1, x: 0, duration: 2.5, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 60%', end: 'bottom 50%', scrub: true } }
+      { 
+        opacity: 1, 
+        x: 0, 
+        duration: 2, 
+        ease: 'power2.out', 
+        scrollTrigger: {
+          trigger: '.description1',
+          start: 'top 80%',
+          end: 'top 60%',
+          scrub: true,
+        },
+      }
     );
 
     gsap.fromTo('.description2', 
       { opacity: 0, x: 100 }, 
-      { opacity: 1, x: 0, duration: 2.5, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 60%', end: 'bottom 50%', scrub: true } }
+      { 
+        opacity: 1, 
+        x: 0, 
+        duration: 2, 
+        ease: 'power2.out', 
+        scrollTrigger: {
+          trigger: '.description2',
+          start: 'top 80%',
+          end: 'top 60%',
+          scrub: true,
+        },
+      }
     );
 
-    // Animations for decorative elements with rotation
+    // Decorative Elements: Spin and scale effect
     gsap.fromTo('.star', 
-      { opacity: 0, scale: 0.8, rotation: -45 }, 
-      { opacity: 1, scale: 1, rotation: 0, duration: 3, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 70%', end: 'bottom 60%', scrub: true } }
+      { opacity: 0, rotation: -180, scale: 0.5 }, 
+      { 
+        opacity: 1, 
+        rotation: 0, 
+        scale: 1.2, 
+        duration: 3, 
+        ease: 'elastic.out(1, 0.5)', 
+        scrollTrigger: {
+          trigger: '.star',
+          start: 'top 85%',
+          end: 'top 65%',
+          scrub: true,
+        },
+      }
     );
 
     gsap.fromTo('.flower', 
-      { opacity: 0, scale: 0.8, rotation: 45 }, 
-      { opacity: 1, scale: 1, rotation: 0, duration: 3, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 70%', end: 'bottom 60%', scrub: true } }
+      { opacity: 0, rotation: 180, scale: 0.5 }, 
+      { 
+        opacity: 1, 
+        rotation: 0, 
+        scale: 1.2, 
+        duration: 3, 
+        ease: 'elastic.out(1, 0.5)', 
+        scrollTrigger: {
+          trigger: '.flower',
+          start: 'top 85%',
+          end: 'top 65%',
+          scrub: true,
+        },
+      }
     );
+
   }, []);
 
   return (

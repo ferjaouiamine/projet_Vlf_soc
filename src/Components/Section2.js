@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Cssfile/Section2.css';
 
-// Importez les images
+// Import the necessary images
 import questionMark from './Pic/élément1.png';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,7 +16,7 @@ const Section2 = () => {
       const box = section.querySelector('.phrase-box');
       const question = section.querySelector('.question-mark');
 
-      // Animation complexe pour les boîtes de texte
+      // Animation for text boxes with scrollTrigger for both directions
       gsap.fromTo(
         box,
         { opacity: 0, y: 100, scale: 0.8 },
@@ -36,7 +36,7 @@ const Section2 = () => {
         }
       );
 
-      // Animation pour les points d'interrogation avec rotation et parallax
+      // Animation for the question marks with rotation and parallax effect
       gsap.fromTo(
         question,
         { opacity: 0, x: index % 2 === 0 ? -50 : 50, rotation: index % 2 === 0 ? -45 : 45 },
@@ -51,12 +51,13 @@ const Section2 = () => {
             start: 'top 70%',
             end: 'bottom 60%',
             scrub: true,
+            toggleActions: 'play reverse play reverse', // Ensures animation reverses on scroll back up
           },
         }
       );
     });
 
-    // Parallax effect on background image
+    // Parallax effect on background image for mobile
     gsap.to('.section2', {
       backgroundPositionY: '50%',
       ease: 'none',
@@ -65,6 +66,13 @@ const Section2 = () => {
         start: 'top bottom',
         end: 'bottom top',
         scrub: true,
+        onUpdate: ({ progress }) => {
+          if (window.innerWidth <= 768) {
+            gsap.to('.section2', {
+              backgroundPositionY: `${50 + progress * 20}%`,
+            });
+          }
+        },
       },
     });
   }, []);
