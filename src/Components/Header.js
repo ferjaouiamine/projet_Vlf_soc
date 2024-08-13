@@ -19,7 +19,7 @@ const HeaderSection = () => {
     const isMobile = window.innerWidth <= 767;
 
     if (isMobile) {
-      // Animation spécifique pour mobile
+      // Animation spécifique pour mobile (inchangée)
       gsap.set('.main-face-image', { opacity: 0, scale: 0.8 });
       gsap.set('.elles, .une', { opacity: 0 });
       
@@ -57,7 +57,27 @@ const HeaderSection = () => {
       });
       
     } else {
-      // Animation pour la version ordinateur (non modifiée)
+      // Animation pour la version ordinateur
+
+      // Animation spécifique pour l'image 'womenFaces' au rechargement de la page
+      gsap.timeline()
+        .to('.main-face-image', {
+          clipPath: 'inset(0% 0% 0% 50%)', // Coupe la moitié gauche
+          duration: 1.5,
+          ease: 'power2.out',
+        })
+        .to('.main-face-image', {
+          clipPath: 'inset(0% 50% 0% 0%)', // Coupe la moitié droite
+          duration: 1.5,
+          ease: 'power2.out',
+        })
+        .to('.main-face-image', {
+          clipPath: 'inset(0% 0% 0% 0%)', // Retour à l'état initial
+          duration: 1.5,
+          ease: 'power2.out',
+        });
+
+      // Les autres animations pour les images restent inchangées
       const images = ['.image1', '.image2', '.image3', '.image4', '.image5'];
       images.forEach((image, index) => {
         gsap.fromTo(
