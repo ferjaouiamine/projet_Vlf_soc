@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './Cssfile/Section6.css'; // Ensure the path to your CSS file is correct
+import './Cssfile/Section6.css'; 
 
 // Import the necessary images
 import backgroundImage from './Pic/GettyImages-1016194666-3.png';
@@ -18,48 +18,126 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section6 = () => {
   useEffect(() => {
-    // Animations for title images with rotation and stagger
-    gsap.fromTo('.comment-title', 
-      { opacity: 0, y: -100, rotation: -10 }, 
-      { opacity: 1, y: 0, rotation: 0, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 80%', end: 'bottom 60%', scrub: true }, stagger: 0.2 }
+    // Parallax background effect
+    gsap.to('.background-image', {
+      yPercent: -20,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.section6',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      },
+    });
+
+    // Title animations with slight rotation and bounce
+    gsap.fromTo(
+      ['.comment-title', '.ellesont-title', '.tunisie-title'],
+      { opacity: 0, y: 50, scale: 0.95, rotation: -5 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        rotation: 0,
+        duration: 1.5,
+        ease: 'power2.out',
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.section6',
+          start: 'top 80%',
+          end: 'bottom 60%',
+          scrub: true,
+        },
+      }
     );
 
-    gsap.fromTo('.ellesont-title', 
-      { opacity: 0, y: -100, rotation: -10 }, 
-      { opacity: 1, y: 0, rotation: 0, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 80%', end: 'bottom 60%', scrub: true }, stagger: 0.3 }
+    // Question mark with elastic rotation
+    gsap.fromTo(
+      '.question-mark-section6',
+      { opacity: 0, scale: 0.8, rotation: -180 },
+      {
+        opacity: 1,
+        scale: 1,
+        rotation: 0,
+        duration: 5,
+        ease: 'elastic.out(1, 0.5)',
+        scrollTrigger: {
+          trigger: '.section6',
+          start: 'top 70%',
+          end: 'bottom 50%',
+          scrub: true,
+        },
+      }
     );
 
-    gsap.fromTo('.tunisie-title', 
-      { opacity: 0, y: -100, rotation: -10 }, 
-      { opacity: 1, y: 0, rotation: 0, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 80%', end: 'bottom 60%', scrub: true }, stagger: 0.4 }
+    // Descriptions slide-in effect
+    gsap.fromTo(
+      '.description1',
+      { opacity: 0, x: -750 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.section6',
+          start: 'top 60%',
+          end: 'bottom 50%',
+          scrub: true,
+        },
+      }
     );
 
-    // Animation for the question mark with rotation
-    gsap.fromTo('.question-mark-section6', 
-      { opacity: 0, scale: 0.8, rotation: 180 }, 
-      { opacity: 1, scale: 1, rotation: 0, duration: 3, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 70%', end: 'bottom 60%', scrub: true } }
+    gsap.fromTo(
+      '.description2',
+      { opacity: 0, x: 750 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.section6',
+          start: 'top 60%',
+          end: 'bottom 50%',
+          scrub: true,
+        },
+      }
     );
 
-    // Animations for description images with slight movement
-    gsap.fromTo('.description1', 
-      { opacity: 0, x: -100 }, 
-      { opacity: 1, x: 0, duration: 2.5, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 60%', end: 'bottom 50%', scrub: true } }
-    );
+    // Continuous floating effect for decorative elements
+    gsap.to('.star', {
+      y: -15,
+      repeat: -1,
+      yoyo: true,
+      duration: 1,
+      ease: 'sine.inOut',
+    });
 
-    gsap.fromTo('.description2', 
-      { opacity: 0, x: 100 }, 
-      { opacity: 1, x: 0, duration: 2.5, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 60%', end: 'bottom 50%', scrub: true } }
-    );
+    gsap.to('.flower', {
+      y: 15,
+      repeat: -1,
+      yoyo: true,
+      duration: 4,
+      ease: 'sine.inOut',
+    });
 
-    // Animations for decorative elements with rotation
-    gsap.fromTo('.star', 
-      { opacity: 0, scale: 0.8, rotation: -45 }, 
-      { opacity: 1, scale: 1, rotation: 0, duration: 3, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 70%', end: 'bottom 60%', scrub: true } }
-    );
-
-    gsap.fromTo('.flower', 
-      { opacity: 0, scale: 0.8, rotation: 45 }, 
-      { opacity: 1, scale: 1, rotation: 0, duration: 3, ease: 'power3.out', scrollTrigger: { trigger: '.section6', start: 'top 70%', end: 'bottom 60%', scrub: true } }
+    // Rotate decorative elements
+    gsap.fromTo(
+      ['.star', '.flower'],
+      { opacity: 0, rotation: -45 },
+      {
+        opacity: 1,
+        rotation: 0,
+        duration: 2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.section6',
+          start: 'top 70%',
+          end: 'bottom 60%',
+          scrub: true,
+        },
+      }
     );
   }, []);
 
@@ -76,7 +154,7 @@ const Section6 = () => {
           <img src={questionMarkImage} alt="Question Mark" className="question-mark-section6" />
         </div>
         <div className="description-container">
-          <img src={descriptions1s6Image} alt="Description 1" className="description1" />
+          <img src={descriptions1s6Image} alt="Description 1" className="description1"  />
           <img src={descriptions2s6Image} alt="Description 2" className="description2" />
         </div>
         <div className="decoration-container">

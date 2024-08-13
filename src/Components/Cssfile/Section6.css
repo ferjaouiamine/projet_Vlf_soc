@@ -1,11 +1,11 @@
-/* Section 6 Styles */
+/* General Styles */
 .section6 {
     position: relative;
     width: 100%;
     padding: 40px 20px;
     background-color: #8770B9;
     overflow: hidden;
-    height: 100vh; /* Full viewport height for desktop */
+    height: 80vh; /* Full viewport height */
 }
 
 .background-image-container {
@@ -33,110 +33,133 @@
 }
 
 /* Title Images */
-.comment-title {
+.comment-title, .ellesont-title, .tunisie-title {
     position: absolute;
+}
+
+.comment-title {
     top: 10%;
     left: 15%;
-    width: 20%; 
+    width: 20%;
 }
 
 .ellesont-title {
-    position: absolute;
-    top: 20%; 
+    top: 20%;
     left: 30%;
-    width: 20%; 
+    width: 20%;
 }
 
 .tunisie-title {
-    position: absolute;
-    top: 32%; 
+    top: 32%;
     left: 15%;
-    width: 45%; 
+    width: 45%;
 }
 
-.question-mark-section6 {  
+.question-mark-section6 {
     position: absolute;
-    top: 5%;
-    right: 40%;
-    width: 10%; 
+    top: 20%;
+    right: 30%;
+    width: 10%;
 }
 
 /* Description Images */
 .description1 {
     position: absolute;
-    bottom: 50%; 
+    bottom: 31%;
     left: 15%;
-    width: 50%; 
+    width: 44%;
 }
 
 .description2 {
     position: absolute;
-    bottom: 40%; 
+    bottom: 15%;
     left: 15%;
-    width: 50%; 
+    width: 44%;
 }
 
 /* Decoration Images */
 .star {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(11%) saturate(2834%) hue-rotate(11deg) brightness(100%) contrast(92%);
     position: absolute;
     left: 10%;
-    top: 45%; 
-    width: 3%; 
+    top: 60%;
+    width: 3%;
 }
 
 .flower {
     position: absolute;
     left: 10%;
-    top: 55%; 
-    width: 3%; 
+    top: 75%;
+    width: 3%;
 }
 
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     .section6 {
         padding: 20px 10px;
-        height: 100%; /* Adjust height to content size */
+        height: auto;
+        position: relative;
+    }
+
+    .comment-title, .ellesont-title, .tunisie-title {
+        width: 90%;
+        left: 5%;
+        position: relative;
+        top: unset;
+        margin-bottom: 20px; /* Add space between elements */
     }
 
     .comment-title {
-        width: 70%;
-        top: 10%;
-        left: 15%;
+        margin-top: 20px;
     }
 
     .ellesont-title {
-        width: 70%;
-        top: 30%;
-        left: 15%;
+        margin-top: 0;
     }
 
     .tunisie-title {
-        width: 80%;
-        top: 50%;
-        left: 10%;
+        margin-top: 0;
     }
 
     .question-mark-section6 {
-        width: 20%;
-        top: 60%;
-        right: 10%;
-    }
-
-    .description1, .description2 {
-        width: 90%;
+        width: 10%;
+        position: relative;
+        top: 5%;
         left: 5%;
-        top: 70%;
+        margin-bottom: 20px;
     }
 
     .star {
         width: 10%;
-        left: 20%;
-        top: 80%;
+        position: relative;
+        top: 5%;
+        left: 5%;
+        margin-bottom: 20px;
     }
 
     .flower {
         width: 10%;
-        left: 60%;
-        top: 85%;
+        position: relative;
+        top: 5%;
+        left: 5%;
+        margin-bottom: 20px;
+    }
+
+    .description1, .description2 {
+        width: 80%;
+        position: relative;
+        text-align: left;
+        margin: 20px auto;
+        top: unset;
+        margin-left: -22%; /* Align text with decoration images */
+    }
+
+    .description1 {
+        margin-top: 10px;
+        
+    }
+
+    .description2 {
+        margin-top: 10px;
     }
 }
