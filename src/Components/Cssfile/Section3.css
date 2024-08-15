@@ -85,7 +85,7 @@
 
 .arrow-container {
   position: absolute;
-  bottom: 150px;
+  bottom: 56%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;

@@ -11,6 +11,7 @@ import Section5 from './Components/Section5';
 import Navbar from './Components/Navbar';
 import Section6 from './Components/Section6';
 import Section7 from './Components/Section7';
+import Section8 from './Components/Section8';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -125,6 +126,7 @@ const App = () => {
       <Section5 />
       <Section6/>
       <Section7/>
+      <Section8/>
     </div>
   );
 };

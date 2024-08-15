@@ -4,11 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Cssfile/HeaderSection.css'; 
 import backgroundImage from './Pic/banner background.png'; 
 import womenFaces from './Pic/portraits_Plan de travail 1 copie 6.png'; 
-import image1 from './Pic/Groupe 134.png';
-import image2 from './Pic/,,.png';
-import image3 from './Pic/….png';
-import image4 from './Pic/Groupe 145.png';
-import image5 from './Pic/Groupe 25.png';
+import image1baguettejaunne from './Pic/Groupe 134.png';
+import image2deuxcote from './Pic/,,.png';
+import image3points3 from './Pic/….png';
+import image4bagettever from './Pic/Groupe 145.png';
+import image5serpon from './Pic/Groupe 25.png';
 import ellesImage from './Pic/Elles   étaient.png'; 
 import uneImage from './Pic/Une      fois.png'; 
 
@@ -19,26 +19,26 @@ const HeaderSection = () => {
     const isMobile = window.innerWidth <= 767;
 
     if (isMobile) {
-      // Animation spécifique pour mobile (inchangée)
-      gsap.set('.main-face-image', { opacity: 0, scale: 0.8 });
+      // Mobile animation setup remains unchanged
+      gsap.set('.main-face-image', { opacity: 0, scale: 0.8, y: 100 });
       gsap.set('.elles, .une', { opacity: 0 });
       
       gsap.timeline()
         .to('.elles, .une', { opacity: 1, duration: 1, delay: 0.5 })
         .to('.main-face-image', { opacity: 1, duration: 1 })
-        .to('.main-face-image', { scale: 1.2, duration: 1, ease: 'power2.out' })
+        .to('.main-face-image', { scale: 1.2, y: 0, duration: 1, ease: 'power2.out' }) // Added 'y: 0' for upward animation
         .to('.main-face-image', {
-          clipPath: 'inset(0% 0% 0% 50%)', // Coupe la moitié gauche
+          clipPath: 'inset(0% 0% 0% 50%)',
           duration: 1,
           ease: 'power2.out',
         })
         .to('.main-face-image', {
-          clipPath: 'inset(0% 50% 0% 0%)', // Coupe la moitié droite
+          clipPath: 'inset(0% 50% 0% 0%)',
           duration: 1,
           ease: 'power2.out',
         });
 
-      // Ajouter des animations pour le défilement dans les deux sens
+      // Scroll-triggered animation
       gsap.to('.elles, .une', {
         scrollTrigger: {
           trigger: '.header-section',
@@ -47,9 +47,9 @@ const HeaderSection = () => {
           scrub: true,
           markers: false,
           onUpdate: (self) => {
-            if (self.direction === -1) { // Scroll vers le haut
+            if (self.direction === -1) { // Scroll up
               gsap.to('.main-face-image', { scale: 1.1, ease: 'power2.out' });
-            } else { // Scroll vers le bas
+            } else { // Scroll down
               gsap.to('.main-face-image', { scale: 1.3, ease: 'power2.out' });
             }
           }
@@ -57,27 +57,28 @@ const HeaderSection = () => {
       });
       
     } else {
-      // Animation pour la version ordinateur
-
-      // Animation spécifique pour l'image 'womenFaces' au rechargement de la page
+      // Animation for desktop
       gsap.timeline()
+        .fromTo('.main-face-image', 
+          { y: 200, opacity: 0 }, // Start from below with no opacity
+          { y: 0, opacity: 1, duration: 1.5, ease: 'power2.out' } // Smooth upward motion
+        )
         .to('.main-face-image', {
-          clipPath: 'inset(0% 0% 0% 50%)', // Coupe la moitié gauche
+          clipPath: 'inset(0% 0% 0% 50%)',
           duration: 1.5,
           ease: 'power2.out',
         })
         .to('.main-face-image', {
-          clipPath: 'inset(0% 50% 0% 0%)', // Coupe la moitié droite
+          clipPath: 'inset(0% 50% 0% 0%)',
           duration: 1.5,
           ease: 'power2.out',
         })
         .to('.main-face-image', {
-          clipPath: 'inset(0% 0% 0% 0%)', // Retour à l'état initial
+          clipPath: 'inset(0% 0% 0% 0%)',
           duration: 1.5,
           ease: 'power2.out',
         });
 
-      // Les autres animations pour les images restent inchangées
       const images = ['.image1', '.image2', '.image3', '.image4', '.image5'];
       images.forEach((image, index) => {
         gsap.fromTo(
@@ -131,13 +132,13 @@ const HeaderSection = () => {
       <div className="header-content">
         <div className="left-text">
           <div className="text-group">
-            <img src={ellesImage} alt="Elles" className="elles" />
+            <img src={ellesImage} alt="Elles" className="left-text" />
           </div>
         </div>
         <div className="right-text">
           <div className="right-text">
             <div className="une_right">
-              <img src={uneImage} alt="une" className="une" />
+              <img src={uneImage} alt="une" className="right-text" />
             </div>
           </div>
         </div>
@@ -149,11 +150,12 @@ const HeaderSection = () => {
           />
         </div>
         {/* Ajout des images supplémentaires */}
-        <img src={image1} alt="Image 1" className="extra-image image1" />
-        <img src={image2} alt="Image 2" className="extra-image image2" />
-        <img src={image3} alt="Image 3" className="extra-image image3" />
-        <img src={image4} alt="Image 4" className="extra-image image4" />
-        <img src={image5} alt="Image 5" className="extra-image image5" />
+        <img src={image1baguettejaunne} alt="Image 1" className="extra-image image1" />
+        <img src={image2deuxcote} alt="Image 2" className="extra-image image2" />
+        <img src={image3points3} alt="Image 3" className="extra-image image3" />
+        <img src={image4bagettever} alt="Image 4" className="extra-image image4" />
+        <img src={image5serpon} alt="Image 5" className="extra-image image5" />
+        
       </div>
     </header>
   );

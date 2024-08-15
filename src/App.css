@@ -57,6 +57,7 @@
   color: #ffd700;
 }
 
+/* Adjusting for Images instead of Text */
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -69,27 +70,6 @@
   margin-top: 100px;
 }
 
-.left-text, .right-text {
-  color: white;
-}
-
-.left-text {
-  text-align: left;
-}
-
-.right-text {
-  text-align: right;
-}
-
-.vf-text {
-  font-size: 4rem;
-  margin-bottom: 20px;
-}
-
-.text-group h1 {
-  font-size: 3rem;
-  margin: 0;
-}
 
 .image-overlay img {
   width: 30%;
@@ -101,85 +81,18 @@
   z-index: 3;
 }
 
-.user-photo img {
-  width: 150px;
-  height: auto;
-  position: absolute;
-  top: 75%;
-  left: 85%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  border-radius: 50%;
-  border: 3px solid white;
-}
 
-.main-content {
-  text-align: center;
-  padding: 40px;
-  background-color: #ffffff;
-  width: 80%;
-  margin-top: -50px;
-}
 
-.text-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #00796b;
-}
 
-.text-section p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #ffffff;
-}
 
-.download-button {
-  background-color: #ff5252;
-  color: white;
-  padding: 15px 25px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
 
-.second-section {
-  background-color: #ffffff;
-  padding: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.content-wrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
-}
 
-.text-content {
-  width: 50%;
-}
 
-.text-content h3 {
-  color: #ff5252;
-  font-size: 2rem;
-  margin: 0;
-}
 
-.footer-section {
-  width: 100%;
-  background-color: #ffeb3b;
-  padding: 20px;
-  text-align: center;
-}
 
-.footer-section h3 {
-  font-size: 1.5rem;
-  color: #004d40;
-}
+
+
 
 /* Mobile Styles */
 @media (max-width: 767px) {
@@ -201,27 +114,13 @@
     margin-top: 50px;
   }
 
-  .left-text, .right-text {
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
-  }
 
-  .vf-text {
-    font-size: 2.5rem;
-  }
 
-  .text-group h1 {
-    font-size: 2rem;
+  .image-overlay img {
+    width: 78%;
+    top: 21%;
+    left: 44%;
   }
-
-  @media (max-width: 767px) {
-    .image-overlay img {
-        width: 78%;
-        top: 21%;
-        left: 44%;
-    }
-}
 
   .user-photo img {
     width: 100px;
@@ -234,14 +133,6 @@
     width: 90%;
   }
 
-  .text-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .text-section p {
-    font-size: 1rem;
-  }
-
   .download-button {
     padding: 10px 20px;
     font-size: 0.9rem;
@@ -251,11 +142,13 @@
     padding: 20px;
   }
 
-  .text-content h3 {
-    font-size: 1.5rem;
+  .text-content img {
+    width: 100%;
+    height: auto;
   }
 
   .footer-section h3 {
     font-size: 1.2rem;
   }
+  
 }

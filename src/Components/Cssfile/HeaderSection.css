@@ -1,3 +1,4 @@
+/* General Styles */
 .header-section {
   width: 100%;
   height: 100vh;
@@ -18,13 +19,33 @@
   object-fit: cover;
 }
 
-/* Classes pour chaque image */
+/* Classes for each image */
 .image1, .image2, .image3, .image4, .image5, .main-face-image {
   position: absolute;
-  z-index: 2; /* Par défaut, au-dessus de l'arrière-plan */
+  z-index: 2; /* Default above the background */
 }
 
-/* Positionnement de chaque image - ajusté pour être responsive */
+/* Positioning and sizing of left-text and right-text images */
+.left-text, .right-text {
+  position: absolute;
+  z-index: 5; /* Ensure it's on top */
+  width: auto; /* Adjust width as needed */
+}
+
+/* Specific Positioning and Sizing for left-text */
+.left-text {
+  top: -136%;
+  left: 2%;
+  width: 42%;
+}
+
+/* Specific Positioning and Sizing for right-text */
+.right-text {
+  top: -143%;
+  right: 2%;
+  width: 52%;
+}
+/* Positioning and Sizing for other images - responsive */
 .image1 {
   height: 101%;
   width: 65%;
@@ -43,7 +64,7 @@
 
 .image3 {
   width: 8%;
-  top: -27%;
+  top: -86%;
   left: 105%;
   transform: translate(-50%, -50%);
 }
@@ -57,9 +78,9 @@
 }
 
 .image5 {
-  height: 243%;
-  width: 82%;
-  top: 178%;
+  height: 160%;
+  width: 72%;
+  top: 225%;
   right: 51%;
   transform: translate(50%, -50%);
   z-index: -1;
@@ -70,30 +91,9 @@
   left: 50%;
   transform: translate(-50%, -30%);
   z-index: 3;
-  opacity: 1; /* Image principale toujours visible */
+  opacity: 1; /* Main image always visible */
 }
 
-/* Ajustements spécifiques pour les éléments de texte */
-.left-text, .right-text {
-  position: absolute;
-  z-index: 5;
-  font-weight: bold;
-  font-family: 'Arial', sans-serif;
-}
-
-.left-text {
-  top: -149%;
-  left: 1%;
-  width: auto; /* Fixer la largeur */
-}
-
-.right-text {
-  top: -174%;
-  right: 1%;
-  width: auto; /* Fixer la largeur */
-}
-
-/* Responsive Styles */
 /* Petits écrans (mobiles) */
 @media (max-width: 767px) {
   .header-section {

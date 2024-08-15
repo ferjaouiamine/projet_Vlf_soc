@@ -3,19 +3,17 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Cssfile/Section7.css'; 
 
-// Importing images to replace text and the new background images
+// Import des images
 import backgroundImage from './Pic/Groupe 260.png';
 import handshake from './Pic/Groupe 264.png';
 import titleImage from './Pic/titleImage.png';
 import graceAuxImage from './Pic/graceAuxImage.png';
 import etablisImage from './Pic/etablisImage.png';
 import partnershipsImage from './Pic/partnershipsImage.png';
-
 import orgsImage from './Pic/orgsImage.png';
 import projectsImage from './Pic/projectsImage.png';
 import andImage from './Pic/andImage.png';
 import atfd from './Pic/atfdImage.png';
-
 import actionsImage from './Pic/actionsImage.png';
 import partnersListImage from './Pic/partnersListImage.png';
 import number21Image from './Pic/number21Image.png';
@@ -23,12 +21,17 @@ import number31Image from './Pic/number31Image.png';
 import projets44Image from './Pic/Projets44.png';
 import backgroundImage2 from './Pic/jauneback.png';  
 import backgroundImage3 from './Pic/noirback.png';  
+import p1 from './Pic/p1.png';  // Nouvelle image ajoutée
+import p2 from './Pic/p2.png';  // Nouvelle image ajoutée
+import p3 from './Pic/p3.png';  // Nouvelle image ajoutée
+import p4 from './Pic/p4.png';  // Nouvelle image ajoutée
+import p5 from './Pic/p5.png';  // Nouvelle image ajoutée
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Section7 = () => {
   useEffect(() => {
-    // Flou et zoom sur les images au défilement
+    // Animation des images
     const images = gsap.utils.toArray('.section7-content img');
     images.forEach((img) => {
       gsap.fromTo(img, 
@@ -103,6 +106,14 @@ const Section7 = () => {
         </div>
         <img src={partnersListImage} alt="Partners list" className="section7-partners-list-image" />
         <img src={atfd} alt="Partners list" className="section7-atfd-image" />
+
+        {/* Nouvelles photos ajoutées
+        <img src={p1} alt="Photo 1" className="p1" />
+        <img src={p2} alt="Photo 2" className="p2" />
+        <img src={p3} alt="Photo 3" className="p3" />
+        <img src={p4} alt="Photo 4" className="p4" />
+        <img src={p5} alt="Photo 4" className="p5" /> */}
+
       </div>
     </section>
   );
