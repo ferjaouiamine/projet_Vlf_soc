@@ -19,42 +19,43 @@
 .des-organisations-image {
   display: block;
   margin: 0 auto 20px;
-  width: 30%;
+  width: 24%;
 }
 
 .qui-ont-image {
   display: inline-block;
-  margin: 0 10px 20px;
-  width: 30%; /* Adjust the width */
+  margin: 0 -5px 20px;
+  width: 10%;
 }
 
 .renforce-image {
   display: inline-block;
   margin: 0 10px 20px;
-  width: 30%; /* Adjust the width */
+  width: 15%;
 }
 .support-text-container {
   position: relative;
   display: inline-block;
-  padding: 15px 25px;
+  padding: 3px 24px;
   background-color: #F2E8CE;
   border-radius: 66%;
-  margin-bottom: 24px;
+  margin-bottom: 0%;
   text-align: center;
-  width: 100%;
+  margin-top: 4%;
+  width: 69%;
   left: 0%;
   height: -9%;
 }
 .voix-feministe-image {
   display: block;
-  margin: 0px auto;
-  width: 30%;
+  margin: -27px auto;
+  width: 24%;
 }
 
 .en-tunisie-image {
   display: block;
-  margin: 5px auto;
-  width: 24%;
+  margin: 26px auto;
+  width: 15%;
 }
 
 
@@ -114,7 +115,7 @@
 .image-left {
   position: absolute;
   top: 20%;
-  left: -26%;
+  left: -9%;
   width: 26%;
   transform: translateY(-50%);
 }
@@ -139,18 +140,18 @@
 
 .etoile {
   position: absolute;
-  top: 42%;
-  right: 23%;
-  width: 8%;
+  top: 23%;
+  right: 28%;
+  width: 6%;
   animation: rotate 5s linear infinite;
 }
 
 .arrow-left {
   position: absolute;
-  top: 49%;
-  left: 23%;
+  top: 35%;
+  left: 31%;
   transform: translateY(-50%) rotate(-45deg);
-  width: 40px;
+  width: 61px;
   animation: fade-right 1s ease-out forwards;
 }
 
@@ -178,7 +179,6 @@
 
   .qui-ont-image, 
   .renforce-image {
-    width: 20%; 
   }
 }
 

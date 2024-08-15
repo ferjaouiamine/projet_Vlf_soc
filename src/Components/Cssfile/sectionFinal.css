@@ -1,0 +1,70 @@
+.full-width-image-container {
+  display: flex;
+  flex-direction: column; /* Empile les images verticalement */
+  align-items: center; /* Centre les éléments horizontalement */
+  width: 100vw; /* Prend toute la largeur de la page */
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 200px; /* Espace entre la première image et la deuxième section */
+}
+
+.second-image-and-text {
+  display: flex;
+  align-items: center; /* Aligne l'image et le texte sur la même ligne */
+}
+
+.second-image {
+  width: auto;
+  height: 400px; /* Ajustez la hauteur de l'image */
+  margin-right: 600px; /* Espace entre l'image et le texte */
+}
+
+.text {
+  font-size: 30px; /* Ajustez la taille du texte */
+  line-height: 2; /* Ajustez la hauteur de ligne pour une meilleure lisibilité */
+  color: rgb(78, 7, 78); /* Couleur du texte */
+}
+
+.custom-line {
+  border: none; /* Supprime les bordures par défaut */
+  border-top: 4px solid black; /* Crée une ligne horizontale noire */
+  width: 80%; /* Largeur de la ligne (ajustez comme nécessaire) */
+  margin: 25px 0; /* Espacement autour de la ligne */
+}
+
+.third-image-container {
+  width: 100%; /* Prend toute la largeur disponible */
+  display: flex; /* Utilise Flexbox pour l'alignement */
+  justify-content: center; /* Centre les images horizontalement */
+  align-items: flex-end; /* Aligne les images en bas du conteneur */
+  margin-top: 300px; /* Espace au-dessus des images */
+}
+
+
+.third-image {
+  width: 40%; /* Largeur de la troisième image */
+  height: 200px; /* Hauteur de la troisième image */
+  margin-right: 400px; /* Ajustez cet espace pour faire glisser l'image vers le centre */
+
+}
+
+.additional-image {
+  width: 40%; /* Largeur de l'image supplémentaire */
+  height: 50px; /* Hauteur de l'image supplémentaire */
+  margin-left: 350px; /* Ajustez cet espace pour faire glisser l'image vers le centre */
+
+
+}
+.bottom-image-container {
+  width: 100%; /* Prend toute la largeur disponible */
+  display: flex; /* Utilise Flexbox pour l'alignement */
+  justify-content: center; /* Centre la nouvelle image horizontalement */
+}
+
+.bottom-image {
+  width: 50%; /* Ajustez la largeur de la nouvelle image */
+  height: auto; /* Ajustez la hauteur de la nouvelle image */
+}

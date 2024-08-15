@@ -1,0 +1,187 @@
+/* Ensure red line under each association item */
+.association-item {
+    width: 100%; /* Full width within the container */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    position: relative; /* Allows absolute positioning of corner images */
+    box-sizing: border-box;
+    border-bottom: 0.5vh solid red;
+
+
+     /* Red line under each association item */
+  }
+  
+  /* Other styles */
+  .section10,
+  .container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all children horizontally */
+    width: 100%;
+    max-width: 1200px; /* Container size remains unchanged */
+    margin: 0 auto; /* Center container */
+    background-color: #f9f9f9;
+    padding: 20px;
+
+  }
+  
+  .group-row,
+  .single-roww,
+  .association-item {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .group-row {
+    gap: 2%; /* Space between images */
+    padding-bottom: 10px;
+    border-bottom: 0.5vh solid red; /* Red line under the images */
+  }
+  
+  .group-row img {
+    max-width: 20%; /* Make images smaller */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .single-roww {
+    padding: 40px 0 20px; /* Padding: Top, Bottom */
+    border-bottom: 0.5vh solid red; /* Red line under the images */
+  }
+  
+  .small-images-row {
+    display: flex;
+    justify-content: center;
+    gap: 2%; /* Space between images */
+    padding: 2% 0; /* Padding: Top, Bottom */
+    border-bottom: 0.5vh solid red; /* Red line under the images */
+  }
+  
+  .small-images-row img {
+    max-width: 23%; /* Make images even smaller */
+    /* max-width: 270px;  Set a maximum width, if needed */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  
+  .container {
+    margin-bottom: 10%; /* Space between containers */
+    position: relative; /* Allows absolute positioning of corner images */
+    padding-bottom: 2%; /* Adjust spacing if needed */
+  }
+  
+  .association-container {
+    display: flex;
+    flex-direction: column; /* Stack associations vertically */
+    width: 100%;
+    max-width: 100%; /* Container size remains unchanged */
+    gap: 2%; /* Space between associations */
+  }
+  
+  #assoc6 img {
+    padding: 0%;
+  }
+  #assoc6 {
+    padding: 0%;
+    position: relative; /* Set this so child elements are positioned relative to this container */
+  }
+  
+  /* Position corner images directly at the bottom corners of the container */
+  .left-corner,
+  .right-corner {
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    width: 3.5%; /* Width of corner images */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Left corner image */
+  .left-corner {
+    left: 0; /* Align to the left edge of the container */
+    margin-bottom: 2%;
+    margin-left: 14.9%; /* Remove any margin */
+  }
+  
+  /* Right corner image */
+  .right-corner {
+    right: 0; /* Align to the right edge of the container */
+    margin-bottom: 2%;
+    margin-right: 14.9%; /* Remove any margin */
+  }
+  
+  .association-wide,
+  .association-small {
+    max-width: 80%; /* Scale down the width */
+    height: auto;
+  }
+  
+  #ligue,
+  #assoc5,
+  #assoc4,
+  #assoc3,
+  #assoc7,
+  #assoc8,
+  .small-images-row2 {
+    padding-top: 2%; /* Adjust the padding value as needed */
+    padding-bottom: 2%;
+  }
+  
+  #assoc5 img {
+    max-width: 100%; /* Ensure the image scales up as needed */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  #assoc8 img {
+    max-width: 100%; /* Increase size, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .small-images-row2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2%; /* Adjust the spacing between images */
+      border-bottom: 0.5vh solid red; /* Red line under the images */
+      flex-wrap: wrap; /* Allows images to wrap onto the next line if necessary */
+    }
+    
+     .actif, .biety {
+      width: 20%; /* Adjust size as needed; should be larger than pt images */
+      height: auto;
+    }
+    .asswat{
+      width: 45%;
+      height: auto;
+    }
+    .pt {
+      width: 2%; /* Adjust size as needed; should be smaller than the other images */
+      height: auto;
+    }
+    
+    /* Optional: Center pt images with respect to the larger images */
+    .small-images-row2 {
+      position: relative;
+    }
+    
+    .pt {
+      position: relative;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+    
+    #assoc9 {
+      display: flex;
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically, if needed */
+      height: 100%; /* Adjust height as needed */
+      padding: 2%; /* Adjust padding around the container using percentage */
+  
+    }
+    
+    #assoc9 img {
+      width: 100%; /* Adjust the percentage to make the image smaller */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 120%; /* Ensure it doesn't exceed the container's width */
+    }
+    
+  
