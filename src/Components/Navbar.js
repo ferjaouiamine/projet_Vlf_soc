@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './Cssfile/Navbar.css'; // Assurez-vous que le chemin est correct
+import './Cssfile/Navbar.css';
 
 const Navbar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +27,10 @@ const Navbar = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }}></div>
@@ -33,7 +38,10 @@ const Navbar = () => {
         <div className="navbar-left">
           <button className="vlf-button">VLF</button>
         </div>
-        <ul className="navbar-links">
+        <div className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <div className="hamburger"></div>
+        </div>
+        <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
           <li><a href="#project">Le projet</a></li>
           <li><a href="#actions">Actions</a></li>
           <li><a href="#stories">Histoires de Réussite</a></li>

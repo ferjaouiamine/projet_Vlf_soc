@@ -1,156 +1,173 @@
 .section8 {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #FCFBC5;
-  }
-  
-  .background-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-  
-  .background-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .section8-content {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: 1;
-    padding-top: 50px;
-  }
-  
-  /* Style pour chaque image */
-  .developed-actions-image {
-    position: absolute;
-    top: 10%;
-    left: 29%;
-    width: 34%;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #FCFBC5;
 }
-  
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+}
+
+.section8-content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+  padding-top: 50px;
+}
+
+/* Style pour chaque image */
+.developed-actions-image {
+  position: absolute;
+  top: 10%;
+  left: 29%;
+  width: 34%;
+}
+
 .actions-image {
-    position: absolute;
-    top: 12%;
-    left: 29%;
-    width: 23%;
+  position: absolute;
+  top: 12%;
+  left: 29%;
+  width: 23%;
 }
-  
+
 .in-time-image {
-    position: absolute;
-    top: 15%;
-    left: 39%;
-    width: 300px;
+  position: absolute;
+  top: 15%;
+  left: 39%;
+  width: 300px;
 }
-  
-  .star-images8{
-    position: absolute;
-    top: 16%;
-    left: 16%;
-    width: 30px;
-    height: auto;
+
+.star-images8 {
+  position: absolute;
+  top: 16%;
+  left: 16%;
+  width: 30px;
+  height: auto;
 }
-  
-  .all-section-image {
-    position: relative;
-    width: 70%;
-    height: auto;
-    margin-top: 40%;
-    left: 15%;
+
+.all-section-image {
+  position: relative;
+  width: 70%;
+  height: auto;
+  margin-top: 40%;
+  left: 15%;
 }
-  
+
 .demi-cercle-image {
-    position: absolute;
-    top: 9%;
-    right: 31%;
-    width: 4%;
-    height: auto;
+  position: absolute;
+  top: 9%;
+  right: 31%;
+  width: 4%;
+  height: auto;
 }
-  
-  .star-nawra-image {
-    position: absolute;
-    bottom: 86%;
-    left: 55%;
-    width: 13%;
-    height: auto;
+
+.star-nawra-image {
+  position: absolute;
+  bottom: 86%;
+  left: 55%;
+  width: 13%;
+  height: auto;
 }
-  /* Ajustements Responsive */
-  @media (max-width: 768px) {
-    .section8-content {
+
+/* Ajustements Responsive pour Tablettes */
+@media (max-width: 768px) {
+  .section8-content {
       padding-top: 30px;
-    }
-  
-    .developed-actions-image,
-    .actions-image,
-    .in-time-image {
-      width: 100%;
-      left: 0;
+  }
+
+  .developed-actions-image,
+  .actions-image,
+  .in-time-image {
+      width: 80%;
+      left: 10%;
+      top: auto;
       position: relative;
       margin-bottom: 20px;
-    }
-  
-    .star-images8 {
-      top: 25%;
+  }
+
+  .star-images8 {
+      top: 5%;
       left: 5%;
       width: 40px;
-      height: 40px;
-    }
-  
-    .demi-cercle-image {
+      height: auto;
+  }
+
+  .demi-cercle-image {
       top: 10%;
       right: 5%;
       width: 60px;
-    }
-  
-    .star-nawra-image {
+      height: auto;
+  }
+
+  .star-nawra-image {
       bottom: 5%;
       left: 5%;
       width: 50px;
-    }
+      height: auto;
   }
-  
-  @media (max-width: 480px) {
-    .section8-content {
+
+  .all-section-image {
+      width: 90%;
+      margin-top: 20px;
+      left: 5%;
+  }
+}
+
+/* Ajustements Responsive pour Mobiles */
+@media (max-width: 480px) {
+  .section8-content {
       padding-top: 20px;
-    }
-  
-    .developed-actions-image,
-    .actions-image,
-    .in-time-image {
+  }
+
+  .developed-actions-image,
+  .actions-image,
+  .in-time-image {
       width: 100%;
       left: 0;
       position: relative;
       margin-bottom: 20px;
-    }
-  
-    .star-images8 {
+  }
+
+  .star-images8 {
+       
       top: 20%;
       left: 2%;
       width: 30px;
-      height: 30px;
-    }
-  
-    .demi-cercle-image {
+      height: auto;
+  }
+
+  .demi-cercle-image {
       top: 5%;
       right: 2%;
       width: 50px;
-    }
-  
-    .star-nawra-image {
+      height: auto;
+  }
+
+  .star-nawra-image {
       bottom: 2%;
       left: 2%;
       width: 40px;
-    }
-    .backgroundcolors8{
-        color: #FCFBC5;
-    }
+      height: auto;
   }
-  
+
+  .all-section-image {
+      width: 100%;
+      margin-top: 20px;
+      left: 0;
+  }
+}
+

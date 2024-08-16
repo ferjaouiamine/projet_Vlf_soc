@@ -3,9 +3,14 @@
     width: 100%;
     height: auto;
     background-color: #8770B9;
+    min-height: 255vh;
+    max-height: 100vh; /* Limite la hauteur maximale */
+    overflow: hidden;
 }
 
 .section9 img {
+    object-fit: cover;  /* Pour que les images remplissent leur espace sans déformation */
+
     position: absolute;
 }
 

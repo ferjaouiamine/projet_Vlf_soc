@@ -1,21 +1,20 @@
 .section1 {
   width: 100%;
-  padding: 40px 10px; /* Reduce the padding to move the section upwards */
+  padding: 40px 10px;
   background-color: #FAF9E5;
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin-top: -50px; /* This moves the entire section upwards */
+  margin-top: -50px;
 }
 
 .section1-content {
   max-width: 100%;
   margin: 0 auto;
   position: relative;
-  padding: 10px; /* Adjust padding for better alignment */
+  padding: 10px;
 }
 
-/* Individual image styling for specific positions */
 .des-organisations-image {
   display: block;
   margin: 0 auto 20px;
@@ -33,6 +32,7 @@
   margin: 0 10px 20px;
   width: 15%;
 }
+
 .support-text-container {
   position: relative;
   display: inline-block;
@@ -46,6 +46,7 @@
   left: 0%;
   height: -9%;
 }
+
 .voix-feministe-image {
   display: block;
   margin: -27px auto;
@@ -58,12 +59,10 @@
   width: 15%;
 }
 
-
-
 .retrouvez-leur-image {
   display: block;
   margin: 40px auto;
-  width: 70%; /* Adjust the width */
+  width: 70%;
 }
 
 .dashed-line {
@@ -119,13 +118,10 @@
   width: 26%;
   transform: translateY(-50%);
 }
+
 .flechflower {
   position: relative;
   width: 10%;
-  /* top: 2%; */
-  /* bottom: 8%; */
-  /* padding-top: 12%; */
-  /* margin-top: -1%; */
   left: 35%;
 }
 
@@ -176,10 +172,6 @@
   .en-tunisie-image {
     max-width: 60%; 
   }
-
-  .qui-ont-image, 
-  .renforce-image {
-  }
 }
 
 /* Medium Screens (Tablets in Landscape) */
@@ -200,38 +192,57 @@
 
 /* Small Screens (Mobile) */
 @media (max-width: 767px) {
+  .section1 {
+    padding: 20px 5px; /* Réduire le padding pour s'adapter aux petits écrans */
+    margin-top: 0; /* Retirer la marge supérieure négative */
+  }
+
   .des-organisations-image, 
   .qui-ont-image, 
   .renforce-image, 
   .voix-feministe-image, 
   .en-tunisie-image {
-    max-width: 80%; 
-    margin-bottom: 10px; 
+    width: 80%; /* Adapter la largeur des images */
+    margin-bottom: 15px; /* Ajouter plus d'espace en bas des images */
   }
 
-  .qui-ont-image, 
-  .renforce-image {
-    width: 40%; 
-  }
+  @media (max-width: 767px) {
+    .qui-ont-image, .renforce-image {
+        width: 38%;
+        margin: 18px 5px;
+    }
+}
 
   .support-text-container {
+    width: 80%; /* Réduire la largeur pour les petits écrans */
     padding: 10px;
-    margin-bottom: 15px;
+    font-size: 0.9rem; /* Ajuster la taille du texte */
+    margin-top: 20px;
   }
 
-  .image-right, .image-left, .arrow-left, .etoile {
-    width: 70px; 
+  .image-right, .image-left {
+    width: 60px; /* Réduire la taille des images décoratives */
+    top: 10%; /* Réajuster la position */
+  }
+
+  .arrow-left, .etoile {
+    width: 30px; /* Ajuster la taille des flèches et des étoiles */
   }
 
   .arrow-left {
-    width: 30px;
+    top: 61%;
+    left: 19%; /* Réajuster la position */
   }
 
   .etoile {
-    width: 50px;
+    top: 20%; /* Réajuster la position */
   }
 
-  .section1 {
-    padding: 30px 5px; 
+  .retrouvez-leur-image {
+    width: 90%; /* Adapter la largeur de l'image */
+  }
+
+  .button-container {
+    margin-top: 20px; /* Ajouter de l'espace au-dessus du bouton */
   }
 }

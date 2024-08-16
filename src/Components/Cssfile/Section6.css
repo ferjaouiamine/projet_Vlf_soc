@@ -102,11 +102,11 @@
     }
 
     .comment-title, .ellesont-title, .tunisie-title {
-        width: 90%;
-        left: 5%;
+        width: 67%;
+        left: -1%;
         position: relative;
         top: unset;
-        margin-bottom: 20px; /* Add space between elements */
+        margin-bottom: 20px;/* Add space between elements */
     }
 
     .comment-title {

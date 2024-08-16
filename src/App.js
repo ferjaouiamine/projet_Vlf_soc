@@ -129,9 +129,9 @@ const App = () => {
       <Section6/>
       <Section7/>
       <Section8/>
-      <Section10 />
 
       <Section9/>
+      <Section10 />
 
 
     </div>

@@ -1,9 +1,18 @@
+/* Ajoutez cette règle pour le body */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
 .vlf-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
+  width: 100%; /* Assure que la largeur prend toute la fenêtre */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 .header-section {
@@ -42,6 +51,8 @@
   list-style: none;
   display: flex;
   gap: 30px;
+  margin: 0; /* Supprime tout espace potentiel ajouté par le navigateur */
+  padding: 0; /* Supprime tout espace potentiel ajouté par le navigateur */
 }
 
 .navbar ul li a {
@@ -57,7 +68,6 @@
   color: #ffd700;
 }
 
-/* Adjusting for Images instead of Text */
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -70,7 +80,6 @@
   margin-top: 100px;
 }
 
-
 .image-overlay img {
   width: 30%;
   height: auto;
@@ -80,19 +89,6 @@
   transform: translateX(-50%);
   z-index: 3;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Mobile Styles */
 @media (max-width: 767px) {
@@ -113,8 +109,6 @@
     padding: 30px 0;
     margin-top: 50px;
   }
-
-
 
   .image-overlay img {
     width: 78%;
@@ -150,5 +144,4 @@
   .footer-section h3 {
     font-size: 1.2rem;
   }
-  
 }
