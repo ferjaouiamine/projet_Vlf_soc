@@ -9,6 +9,8 @@ import image2deuxcote from './Pic/,,.png';
 import image3points3 from './Pic/….png';
 import image4bagettever from './Pic/Groupe 145.png';
 import image5serpon from './Pic/Groupe 25.png';
+import image6serpon from './Pic/Groupe 25.png';
+
 import ellesImage from './Pic/Elles   étaient.png'; 
 import uneImage from './Pic/Une      fois.png'; 
 
@@ -28,12 +30,12 @@ const HeaderSection = () => {
         .to('.main-face-image', { opacity: 1, duration: 1 })
         .to('.main-face-image', { scale: 1.2, y: 0, duration: 1, ease: 'power2.out' }) // Added 'y: 0' for upward animation
         .to('.main-face-image', {
-          clipPath: 'inset(0% 0% 0% 50%)',
+          clipPath: 'inset(0% 0% 50% 50%)',
           duration: 1,
           ease: 'power2.out',
         })
         .to('.main-face-image', {
-          clipPath: 'inset(0% 50% 0% 0%)',
+          clipPath: 'inset(0% 0% 0% 0%)',
           duration: 1,
           ease: 'power2.out',
         });
@@ -155,6 +157,8 @@ const HeaderSection = () => {
         <img src={image3points3} alt="Image 3" className="extra-image image3" />
         <img src={image4bagettever} alt="Image 4" className="extra-image image4" />
         <img src={image5serpon} alt="Image 5" className="extra-image image5" />
+        {/* <img src={image6serpon} alt="Image 6" className="extra-image image6" /> */}
+
         
       </div>
     </header>

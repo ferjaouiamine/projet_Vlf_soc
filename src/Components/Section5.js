@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Cssfile/Section5.css'; 
 
 import starImage1 from './Pic/star1.png'; 
@@ -20,108 +22,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section5 = () => {
   useEffect(() => {
-    // Desktop Animations
-    if (window.innerWidth >= 768) {
-      gsap.fromTo('.funds-item', 
-        { opacity: 0, y: 100 }, 
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.5,
-          ease: 'power2.out',
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: '.section5-content',
-            start: 'top 80%',
-            end: 'bottom 60%',
-            scrub: true,
-          },
-        }
-      );
+    // Initialisation de AOS
+    AOS.init({
+      duration: 1200, // Durée de l'animation AOS
+    });
 
-      gsap.fromTo('.background-image-right', 
-        { scale: 1, x: 0 }, 
-        { 
-          scale: 1.5,
-          x: 100,
-          duration: 2,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.section5',
-            start: 'top 80%',
-            end: 'bottom 60%',
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo('.star-image', 
-        { rotation: 0, opacity: 0 }, 
-        {
-          rotation: 360,
-          opacity: 1,
-          duration: 1.5,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.section5',
-            start: 'top 70%',
-            end: 'bottom 60%',
-            scrub: true,
-          },
-        }
-      );
-    }
-
-    // Mobile Animations
-    if (window.innerWidth < 768) {
-      gsap.fromTo('.funds-item', 
-        { opacity: 0, y: 100 }, 
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.section5-content',
-            start: 'top 90%',
-            end: 'bottom 70%',
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo('.background-image-right', 
-        { scale: 1, x: 0 }, 
-        { 
-          scale: 1.3,
-          x: 50,
-          duration: 1.5,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.section5',
-            start: 'top 90%',
-            end: 'bottom 70%',
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo('.star-image', 
-        { rotation: 0, opacity: 0 }, 
-        {
-          rotation: 180,
-          opacity: 1,
-          duration: 1.5,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.section5',
-            start: 'top 80%',
-            end: 'bottom 60%',
-            scrub: true,
-          },
-        }
-      );
-    }
+    // Animations GSAP pour les étoiles (stars)
+    gsap.fromTo('.star-image', 
+      { rotation: 0, opacity: 0 }, 
+      {
+        rotation: 360,
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.section5',
+          start: 'top 70%',
+          end: 'bottom 60%',
+          scrub: true,
+        },
+      }
+    );
   }, []);
 
   return (
@@ -129,21 +50,21 @@ const Section5 = () => {
       <div className="background-container">
         <img src={starImage1} alt="Star 1" className="star-image star1" />
         <img src={starImage2} alt="Star 2" className="star-image star2" />
-        <img src={backgroundImageRight} alt="Background Right" className="background-image-right" />
+        <img src={backgroundImageRight} alt="Background Right" className="background-image-right" data-aos="fade-up" data-aos-delay="500" />
       </div>
       <div className="section5-content">
-        <div className="funds-item">
-          <img src={fondjaunne} alt="fondjaune" className="fondjaune" />
-          <img src={fondPluriannuelImage} alt="Fonds Pluriannuel" className="funds-title-image" />
-          <img src={description1Image} alt="Description 1" className="funds-description-image" />
+        <div className="funds-item"  >
+          <img src={fondjaunne} alt="fondjaune" className="fondjaune" data-aos="fade-up" data-aos-delay="1000" />
+          <img src={fondPluriannuelImage} alt="Fonds Pluriannuel" className="funds-title-image" data-aos="fade-up" data-aos-delay="1500" />
+          <img src={description1Image} alt="Description 1" className="funds-description-image" data-aos="fade-up" data-aos-delay="1700" />
         </div>
-        <div className="funds-item">
-          <img src={fondReacitifImage} alt="Fonds Réactif" className="funds-title-image" />
-          <img src={description2Image} alt="Description 2" className="funds-description-image" />
+        <div className="funds-item"  >
+          <img src={fondReacitifImage}  data-aos="fade-up" alt="Fonds Réactif" className="funds-title-image" data-aos-delay="1800" />
+          <img src={description2Image} alt="Description 2" data-aos="fade-up"  className="funds-description-image"  data-aos-delay="1900"/>
         </div>
-        <div className="funds-item">
-          <img src={fondInnovationImage} alt="Fonds Innovation" className="funds-title-image" />
-          <img src={description3Image} alt="Description 3" className="funds-description-image" />
+        <div className="funds-item"  >
+          <img src={fondInnovationImage} data-aos="fade-up" alt="Fonds Innovation" className="funds-title-image"  data-aos-delay="2000"/>
+          <img src={description3Image} alt="Description 3" data-aos="fade-up" className="funds-description-image" data-aos-delay="2100" />
         </div>
       </div>
     </section>

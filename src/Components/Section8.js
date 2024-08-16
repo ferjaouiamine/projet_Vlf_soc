@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Cssfile/section8.css';
 import backgroundImage from './Pic/backgroundImage8.png'; // Image de fond de la section
 import developedActions from './Pic/elles-ont-developpe.png'; // Image "elles ont développé"
@@ -9,20 +13,102 @@ import allSectionImage from './Pic/toutlasection8.png'; // Image pour toute la s
 import demiCercle from './Pic/demicercle.png'; // Nouvelle image "demicercle"
 import starNawra from './Pic/starnawara.png'; // Nouvelle image "starnawra"
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Section8 = () => {
+  useEffect(() => {
+    // Initialisation de AOS
+    AOS.init({
+      duration: 1200,
+    });
+
+    // Animation GSAP pour les éléments spécifiques
+    gsap.fromTo(
+      '.star-image',
+      { scale: 0, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.section8',
+          start: 'top 80%',
+          end: 'bottom 60%',
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      '.star-nawra-image',
+      { rotation: -180, opacity: 0 },
+      {
+        rotation: 0,
+        opacity: 1,
+        duration: 2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.section8',
+          start: 'top 80%',
+          end: 'bottom 60%',
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="section8 " >
+    <section className="section8">
       <div className="background-container">
         <img src={backgroundImage} alt="Background" className="background-image" />
       </div>
       <div className="section8-content">
-        <img src={developedActions} alt="Elles ont développé" className="developed-actions-image" />
-        <img src={actionsImage} alt="Des actions" className="actions-image" />
-        <img src={inTimeImage} alt="Dans le temps" className="in-time-image" />
-        <img src={starImage} alt="Étoile petite" className="star-image" />
-        <img src={allSectionImage} alt="Tout la section" className="all-section-image" />
-        <img src={demiCercle} alt="Demi Cercle" className="demi-cercle-image" /> {/* Ajout de la nouvelle image demicercle */}
-        <img src={starNawra} alt="Star Nawra" className="star-nawra-image" /> {/* Ajout de la nouvelle image starnawra */}
+        <img 
+          src={developedActions} 
+          alt="Elles ont développé" 
+          className="developed-actions-image" 
+          data-aos="fade-up" 
+          data-aos-delay="0" 
+        />
+        <img 
+          src={actionsImage} 
+          alt="Des actions" 
+          className="actions-image" 
+          data-aos="fade-up" 
+          data-aos-delay="500" 
+        />
+        <img 
+          src={inTimeImage} 
+          alt="Dans le temps" 
+          className="in-time-image" 
+          data-aos="fade-up" 
+          data-aos-delay="1000" 
+        />
+        <img 
+          src={starImage} 
+          alt="Étoile petite" 
+          className="star-image" 
+        />
+        <img 
+          src={allSectionImage} 
+          alt="Tout la section" 
+          className="all-section-image" 
+          data-aos="fade-up" 
+          data-aos-delay="1500" 
+        />
+        <img 
+          src={demiCercle} 
+          alt="Demi Cercle" 
+          className="demi-cercle-image" 
+          data-aos="fade-up" 
+          data-aos-delay="2000" 
+        />
+        <img 
+          src={starNawra} 
+          alt="Star Nawra" 
+          className="star-nawra-image" 
+        />
       </div>
     </section>
   );

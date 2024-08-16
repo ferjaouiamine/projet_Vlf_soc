@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Cssfile/Section4.css';
 import backgroundImage from './Pic/Rectangle 170.png'; 
 import durationImage from './Pic/Groupe 160.png'; 
@@ -13,38 +15,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section4 = () => {
   useEffect(() => {
-    gsap.fromTo('.section4 .duration-image', 
-      { y: '100%', opacity: 0 }, 
-      {
-        y: '0%', 
-        opacity: 1, 
-        ease: 'power3.out', 
-        duration: 1.5, 
-        scrollTrigger: {
-          trigger: '.section4',
-          start: 'top 80%',
-          end: 'bottom 60%',
-          scrub: true,
-        },
-      }
-    );
+    AOS.init({
+      duration: 1200, // Durée de l'animation pour AOS
+    });
 
-    gsap.fromTo('.section4 .hourglass-image', 
-      { x: '-100%', opacity: 0 }, 
-      {
-        x: '0%', 
-        opacity: 1, 
-        ease: 'power3.out', 
-        duration: 1.5, 
-        scrollTrigger: {
-          trigger: '.section4',
-          start: 'top 70%',
-          end: 'bottom 60%',
-          scrub: true,
-        },
-      }
-    );
-
+    // Animation GSAP pour les autres éléments
     gsap.fromTo('.section4 .hand-image', 
       { x: '100%', y: '-100%', opacity: 0 }, 
       {
@@ -62,7 +37,6 @@ const Section4 = () => {
       }
     );
 
-    // Animation for new images
     gsap.fromTo('.section4 .r3ad-image', 
       { x: '-100%', opacity: 0 }, 
       {
@@ -99,14 +73,43 @@ const Section4 = () => {
   return (
     <section className="section4">
       <div className="background-container">
-        <img src={backgroundImage} alt="Background" className="background-image" />
+        <img 
+          src={backgroundImage} 
+          alt="Background" 
+          className="background-image" 
+        />
       </div>
       <div className="duration-objective-container">
-        <img src={durationImage} alt="Hourglass" className="hourglass-image" />
-        <img src={hourglassImage} alt="duration" className="duration-image" />
-        <img src={handImage} alt="Hand" className="hand-image" />
-        <img src={r3adImage} alt="R3ad" className="r3ad-image" /> {/* New Image */}
-        <img src={cotetImage} alt="Cotet" className="cotet-image" /> {/* New Image */}
+      <img 
+          src={durationImage} 
+          alt="duration" 
+          className="hourglass-image" 
+          data-aos="fade-up" 
+          data-aos-delay="1000" 
+        />
+        <img 
+          src={hourglassImage} 
+          alt="Hourglass" 
+          className="duration-image" 
+          data-aos="fade-up" 
+          data-aos-delay="1500" 
+        />
+    
+        <img 
+          src={handImage} 
+          alt="Hand" 
+          className="hand-image" 
+        />
+        <img 
+          src={r3adImage} 
+          alt="R3ad" 
+          className="r3ad-image" 
+        />
+        <img 
+          src={cotetImage} 
+          alt="Cotet" 
+          className="cotet-image" 
+        />
       </div>
     </section>
   );

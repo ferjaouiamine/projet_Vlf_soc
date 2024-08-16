@@ -80,8 +80,18 @@
 .image5 {
   height: 160%;
   width: 72%;
-  top: 225%;
+  top: 226%;
   right: 51%;
+  transform: translate(50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.image6 {
+  height: 10%;
+  width: 10%;
+  top: 25%;
+  right: 11%;
   transform: translate(50%, -50%);
   z-index: -1;
 }

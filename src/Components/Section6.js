@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Cssfile/Section6.css'; 
 
 // Import the necessary images
@@ -18,6 +20,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section6 = () => {
   useEffect(() => {
+    // Initialisation de AOS
+    AOS.init({
+      duration: 1200, // Durée de l'animation AOS
+    });
+
     // Parallax background effect
     gsap.to('.background-image', {
       yPercent: -20,
@@ -29,27 +36,6 @@ const Section6 = () => {
         scrub: true,
       },
     });
-
-    // Title animations with slight rotation and bounce
-    gsap.fromTo(
-      ['.comment-title', '.ellesont-title', '.tunisie-title'],
-      { opacity: 0, y: 50, scale: 0.95, rotation: -5 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        rotation: 0,
-        duration: 1.5,
-        ease: 'power2.out',
-        stagger: 0.3,
-        scrollTrigger: {
-          trigger: '.section6',
-          start: 'top 80%',
-          end: 'bottom 60%',
-          scrub: true,
-        },
-      }
-    );
 
     // Question mark with elastic rotation
     gsap.fromTo(
@@ -148,13 +134,35 @@ const Section6 = () => {
       </div>
       <div className="section6-content">
         <div className="title-container">
-          <img src={titleCommentImage} alt="Comment" className="comment-title" />
-          <img src={titleEllesOntImage} alt="Elles Ont" className="ellesont-title" />
-          <img src={titleFaitEvoluerImage} alt="Fait Evoluer la Tunisie" className="tunisie-title" />
-          <img src={questionMarkImage} alt="Question Mark" className="question-mark-section6" />
+          <img 
+            src={titleCommentImage} 
+            alt="Comment" 
+            className="comment-title" 
+            data-aos="fade-up" 
+            data-aos-delay="0"
+          />
+          <img 
+            src={titleEllesOntImage} 
+            alt="Elles Ont" 
+            className="ellesont-title" 
+            data-aos="fade-up" 
+            data-aos-delay="500"
+          />
+          <img 
+            src={titleFaitEvoluerImage} 
+            alt="Fait Evoluer la Tunisie" 
+            className="tunisie-title" 
+            data-aos="fade-up" 
+            data-aos-delay="800"
+          />
+          <img 
+            src={questionMarkImage} 
+            alt="Question Mark" 
+            className="question-mark-section6" 
+          />
         </div>
         <div className="description-container">
-          <img src={descriptions1s6Image} alt="Description 1" className="description1"  />
+          <img src={descriptions1s6Image} alt="Description 1" className="description1" />
           <img src={descriptions2s6Image} alt="Description 2" className="description2" />
         </div>
         <div className="decoration-container">

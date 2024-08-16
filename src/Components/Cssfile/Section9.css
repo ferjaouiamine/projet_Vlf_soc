@@ -1,3 +1,4 @@
+/* Style par défaut pour les grands écrans (desktop) */
 .section9 {
     position: relative;
     width: 100%;
@@ -10,11 +11,10 @@
 
 .section9 img {
     object-fit: cover;  /* Pour que les images remplissent leur espace sans déformation */
-
     position: absolute;
 }
 
-/* Positionnement spécifique des images */
+/* Positionnement spécifique des images (desktop) */
 .imgBackgrounds9 {
     top: 0;
     left: 0;
@@ -256,14 +256,447 @@
     z-index: 3;
 }
 
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    .section9 img {
-        width: 90%;
+/* Responsive adjustments for tablets */
+@media (max-width: 1024px) {
+    .imgDeuxCote {
+        top: 12vh;
+        left: 25%;
+        width: 10%;
+    }
+    .imgHistoire {
+        top: 15vh;
+        left: 35%;
+        width: 20%;
+    }
+    .imgBackgroundHistoire {
+        top: 20vh;
+        left: 34%;
+        width: 22%;
+    }
+    .imgBoiteDialogue {
+        top: 10vh;
+        left: 70%;
+        width: 28%;
+    }
+    .imglaLune {
+        top: 5vh;
+        right: 45%;
+        width: 60%;
+    }
+    .imgDeReussite {
+        top: 25vh;
+        left: 40%;
+        width: 20%;
+    }
+    .imgDeuxCoteInverse {
+        top: 30vh;
+        right: 30%;
+        width: 5%;
+    }
+    .imgDialogueTransparente {
+        top: 35vh;
+        left: 34%;
+        width: 15%;
+    }
+    .imgRectangleBlanc {
+        top: 38vh;
+        left: 45%;
+        width: 12%;
+    }
+    .imgVisionKebili {
+        top: 40vh;
+        left: 45%;
+        width: 15%;
+    }
+    .imgFlecheBlanc {
+        top: 45vh;
+        left: 65%;
+        width: 5%;
+    }
+    .imgFemmeImgGauche {
+        top: 55vh;
         left: 5%;
-        top: unset;
-        position: relative;
-        margin-bottom: 20px;
-        z-index: 1;
+        width: 30%;
+    }
+    .imgLigneMauve, .imgTextElles, .imgEmpowerment {
+        top: 65vh;
+        left: 25%;
+        width: 40%;
+    }
+    .imgBagetteMauve {
+        top: 75vh;
+        left: 45%;
+        width: 25%;
+    }
+    .imgDateAssociation {
+        top: 105vh;
+        left: 25%;
+        width: 38%;
+    }
+    .imgAvecSonPartenaire {
+        top: 115vh;
+        left: 15%;
+        width: 50%;
+    }
+    .imgLeCoursPassport, .imgParConsequent {
+        top: 125vh;
+        left: 15%;
+        width: 50%;
+    }
+    .imgBackgroundTextProjet, .imgLesProjetVisant {
+        top: 135vh;
+        left: 15%;
+        width: 50%;
+    }
+    .imgCetteApprocheBasse {
+        top: 170vh;
+        left: 15%;
+        width: 50%;
+    }
+    .imgLes3Fleurs {
+        top: 160vh;
+        left: 55%;
+        width: 8%;
+    }
+    .imgEstNovatrice {
+        top: 185vh;
+        left: 20%;
+        width: 45%;
+    }
+    .imgSolutionFacile {
+        top: 190vh;
+        left: 25%;
+        width: 35%;
+    }
+    .imgParagrapheVisionKebili {
+        top: 195vh;
+        left: 18%;
+        width: 45%;
+    }
+    .imgLigneBlanc2 {
+        top: 210vh;
+        left: 30%;
+        width: 15%;
+    }
+    .imgCetteApproche, .imgFeministe22, .imgIntersectionnelle {
+        top: 215vh;
+        left: 15%;
+        width: 25%;
+    }
+    .imgSansPourAutant, .imgMeriteAmplement {
+        top: 225vh;
+        left: 20%;
+        width: 40%;
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 767px) {
+    .imgDeuxCote {
+        top: 15vh;
+        left: 20%;
+        width: 12%;
+    }
+    .imgHistoire {
+        top: 20vh;
+        left: 30%;
+        width: 22%;
+    }
+    .imgBackgroundHistoire {
+        top: 25vh;
+        left: 29%;
+        width: 25%;
+    }
+    .imgBoiteDialogue {
+        top: 15vh;
+        left: 65%;
+        width: 30%;
+    }
+    .imglaLune {
+        top: 10vh;
+        right: 40%;
+        width: 65%;
+    }
+    .imgDeReussite {
+        top: 30vh;
+        left: 35%;
+        width: 22%;
+    }
+    .imgDeuxCoteInverse {
+        top: 35vh;
+        right: 25%;
+        width: 7%;
+    }
+    .imgDialogueTransparente {
+        top: 40vh;
+        left: 29%;
+        width: 18%;
+    }
+    .imgRectangleBlanc {
+        top: 45vh;
+        left: 40%;
+        width: 15%;
+    }
+    .imgVisionKebili {
+        top: 48vh;
+        left: 42%;
+        width: 18%;
+    }
+    .imgFlecheBlanc {
+        top: 50vh;
+        left: 60%;
+        width: 8%;
+    }
+    .imgFemmeImgGauche {
+        top: 55vh;
+        left: 5%;
+        width: 35%;
+    }
+    .imgLigneMauve, .imgTextElles, .imgEmpowerment {
+        top: 65vh;
+        left: 20%;
+        width: 45%;
+    }
+    .imgBagetteMauve {
+        top: 75vh;
+        left: 40%;
+        width: 28%;
+    }
+    .imgDateAssociation {
+        top: 110vh;
+        left: 20%;
+        width: 40%;
+    }
+    .imgAvecSonPartenaire {
+        top: 120vh;
+        left: 15%;
+        width: 50%;
+    }
+    .imgLeCoursPassport, .imgParConsequent {
+        top: 130vh;
+        left: 15%;
+        width: 50%;
+    }
+    .imgBackgroundTextProjet, .imgLesProjetVisant {
+        top: 140vh;
+        left: 15%;
+        width: 50%;
+    }
+    .imgCetteApprocheBasse {
+        top: 175vh;
+        left: 15%;
+        width: 50%;
+    }
+    .imgLes3Fleurs {
+        top: 160vh;
+        left: 55%;
+        width: 10%;
+    }
+    .imgEstNovatrice {
+        top: 185vh;
+        left: 20%;
+        width: 45%;
+    }
+    .imgSolutionFacile {
+        top: 190vh;
+        left: 25%;
+        width: 35%;
+    }
+    .imgParagrapheVisionKebili {
+        top: 195vh;
+        left: 18%;
+        width: 45%;
+    }
+    .imgLigneBlanc2 {
+        top: 210vh;
+        left: 30%;
+        width: 15%;
+    }
+    .imgCetteApproche, .imgFeministe22, .imgIntersectionnelle {
+        top: 215vh;
+        left: 15%;
+        width: 25%;
+    }
+    .imgSansPourAutant, .imgMeriteAmplement {
+        top: 225vh;
+        left: 20%;
+        width: 40%;
+    }
+}
+
+/* Responsive adjustments for extra small screens */
+@media (max-width: 480px) {
+    .section9 {
+        min-height: 127vh; /* Ajuster la hauteur minimale pour les petits écrans */
+    }
+
+    .imgDeuxCote {
+        top: 5vh;
+        left: 30%;
+        width: 12%;
+    }
+    .imgHistoire {
+        top: 9vh;
+        left: 44%;
+        width: 27%;
+    }
+    .imgBackgroundHistoire {
+        top: 11vh;
+        left: 42%;
+        width: 30%;
+    }
+    .imgBoiteDialogue {
+        top: 3vh;
+        left: 73%;
+        width: 43%;
+    }
+    .imglaLune {
+        top: 4vh;
+        right: 35%;
+        width: 70%;
+    }
+    .imgDeReussite {
+        top: 13vh;
+        left: 46%;
+        width: 33%;
+    }
+    .imgDeuxCoteInverse {
+        top: 17vh;
+        right: 13%;
+        width: 10%;
+    }
+    .imgDialogueTransparente {
+        top: 20vh;
+        left: 35%;
+        width: 23%;
+    }
+    .imgRectangleBlanc {
+        top: 21vh;
+        left: 60%;
+        width: 18%;
+    }
+    .imgVisionKebili {
+        top: 23vh;
+        left: 59%;
+        width: 22%;
+    }
+    .imgFlecheBlanc {
+        top: 23vh;
+        left: 82%;
+        width: 10%;
+    }
+    .imgFemmeImgGauche {
+        top: 27vh;
+        left: 0%;
+        width: 63%;
+    }
+    .imgLigneMauve {
+        top: 29vh;
+        left: 50%;
+        width: 49%;
+    }
+    .imgTextElles{
+              top: 30vh;
+        left: 45%;
+        width: 54%;
+   
+    }
+    .imgEmpowerment{
+        top: 35vh;
+        left: 50%;
+        width: 49%;
+   
+        
+    }
+    .imgBagetteMauve {
+        top: 41vh;
+        left: 67%;
+        width: 30%;
+    }
+    .imgDateAssociation {
+        top: 54vh;
+        left: 64%;
+        width: 35%;
+    }
+    .imgAvecSonPartenaire {
+        top: 57vh;
+        left: 10%;
+        width: 92%;
+    }
+    .imgLeCoursPassport  {
+        top: 60vh;
+        left: 10%;
+        width: 90%;
+    }
+    .imgParConsequent{
+        top: 65vh;
+        left: 10%;
+        width: 92%;
+        
+    }
+    .imgBackgroundTextProjet, .imgLesProjetVisant {
+        top: 70vh;
+        left: 10%;
+        width: 88%;
+    }
+    .imgCetteApprocheBasse {
+        top: 82vh;
+        left: 10%;
+        width: 86%;
+    }
+    .imgLes3Fleurs {
+        top: 77vh;
+        left: 83%;
+        width: 12%;
+        z-index: 2;
+    }
+    .imgEstNovatrice {
+        top: 88vh;
+        left: 20%;
+        width: 90%;
+    }
+    .imgSolutionFacile {
+        top: 90vh;
+        left: 41%;
+        width: 51%;
+    }
+  
+
+    .imgParagrapheVisionKebili {
+        top: 95vh;
+        left: 12%;
+        width: 86%;
+    }
+    .imgLigneBlanc2 {
+        top: 106vh;
+        left: 36%;
+        width: 35%;
+    }
+    .imgCetteApproche {
+        top: 109vh;
+        left: 15%;
+        width: 25%;
+    }
+    .imgFeministe22{
+        top: 109vh;
+        left: 41%;
+        width: 17%;
+    }
+    .imgIntersectionnelle{
+        top: 109vh;
+        left: 59%;
+        width: 32%;
+    
+    }
+    .imgSansPourAutant {
+        top: 113vh;
+        left: 16%;
+        width: 79%;
+    }
+    .imgMeriteAmplement{
+        top: 116vh;
+        left: 16%;
+        width: 79%;
+        
     }
 }
