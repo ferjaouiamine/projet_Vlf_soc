@@ -114,66 +114,68 @@ const Section9 = () => {
         src={imgBoiteDialogue} 
         alt="Boite Dialogue" 
         className="imgBoiteDialogue" 
-        data-aos="fade-up" 
-        data-aos-delay="1500" 
       />
       <img 
         src={imgLalune} 
         alt="Lune" 
-        className="imglaLune" 
+        className="imglaLune"
+        
+        data-aos="fade-up" 
+        data-aos-delay="1000"  
       />
       <img 
         src={imgDeReussite} 
         alt="De Reussite" 
         className="imgDeReussite" 
         data-aos="fade-up" 
-        data-aos-delay="2000" 
+        data-aos-delay="1200" 
       />
       <img 
         src={imgDeuxCoteInverse} 
         alt="Deux Cote Inverse" 
-        className="imgDeuxCoteInverse" 
+        className="imgDeuxCoteInverse"
+        data-aos="fade-up" 
+        data-aos-delay="1300"  
       />
       <img 
         src={imgDialogueTransparente} 
         alt="Dialogue Transparente" 
         className="imgDialogueTransparente" 
+     
         data-aos="fade-up" 
-        data-aos-delay="2500" 
+        data-aos-delay="3000" 
       />
       <img 
         src={imgRectangleBlanc} 
         alt="Rectangle Blanc" 
         className="imgRectangleBlanc" 
         data-aos="fade-up" 
-        data-aos-delay="3000" 
+        data-aos-delay="3500" 
       />
       <img 
         src={imgVisionKebili} 
         alt="Vision Kebili" 
         className="imgVisionKebili" 
         data-aos="fade-up" 
-        data-aos-delay="3500" 
+        data-aos-delay="4000" 
       />
       <img 
         src={imgFlecheBlanc} 
         alt="Fleche Blanc" 
         className="imgFlecheBlanc" 
         data-aos="fade-up" 
-        data-aos-delay="4000" 
+        data-aos-delay="4500" 
       />
       <img 
         src={imgFemmeImgGauche} 
         alt="Femme Gauche" 
         className="imgFemmeImgGauche" 
-        data-aos="fade-up" 
-        data-aos-delay="4500" 
+        
       />
       <img 
         src={imgLigneMauve} 
         alt="Ligne Mauve" 
-        className="imgLigneMauve" 
-        data-aos="fade-up" 
+        className="imgLigneMauve"  data-aos="fade-up" 
         data-aos-delay="5000" 
       />
       <img 

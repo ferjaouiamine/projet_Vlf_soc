@@ -10,7 +10,7 @@ import './Cssfile/sectionFinal.css';
 const SectionFinal = () => {
     return (
         <div className="full-width-image-container">
-            <img src={pic} alt="Full Width" className="full-width-image" />
+            {/* <img src={pic} alt="Full Width" className="full-width-image" /> */}
             <div className="second-image-and-text">
                 <img src={pic2} alt="Second Image" className="second-image" />
                 <p className="text">

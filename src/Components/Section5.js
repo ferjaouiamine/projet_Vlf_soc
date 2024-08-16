@@ -29,7 +29,9 @@ const Section5 = () => {
 
     // Animations GSAP pour les étoiles (stars)
     gsap.fromTo('.star-image', 
-      { rotation: 0, opacity: 0 }, 
+      { rotation: 0, opacity: 0
+
+       }, 
       {
         rotation: 360,
         opacity: 1,
@@ -50,7 +52,7 @@ const Section5 = () => {
       <div className="background-container">
         <img src={starImage1} alt="Star 1" className="star-image star1" />
         <img src={starImage2} alt="Star 2" className="star-image star2" />
-        <img src={backgroundImageRight} alt="Background Right" className="background-image-right" data-aos="fade-up" data-aos-delay="500" />
+        <img src={backgroundImageRight} alt="Background Right" className="background-image-right"  />
       </div>
       <div className="section5-content">
         <div className="funds-item"  >

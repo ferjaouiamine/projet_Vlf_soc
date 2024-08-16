@@ -40,22 +40,22 @@ const Section8 = () => {
       }
     );
 
-    gsap.fromTo(
-      '.star-nawra-image',
-      { rotation: -180, opacity: 0 },
-      {
-        rotation: 0,
-        opacity: 1,
-        duration: 2,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: '.section8',
-          start: 'top 80%',
-          end: 'bottom 60%',
-          scrub: true,
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   '.star-nawra-image',
+    //   { rotation: -180, opacity: 0 },
+    //   {
+    //     rotation: 0,
+    //     opacity: 1,
+    //     duration: 2,
+    //     ease: 'power2.out',
+    //     scrollTrigger: {
+    //       trigger: '.section8',
+    //       start: 'top 80%',
+    //       end: 'bottom 60%',
+    //       scrub: true,
+    //     },
+    //   }
+    // );
   }, []);
 
   return (
