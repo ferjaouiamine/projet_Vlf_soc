@@ -6,6 +6,41 @@
   box-sizing: border-box;
   background-color: #FCFBC5;
 }
+/* Styles pour P1 à P5 dans la section 8 */
+.section8 .p1, .section8 .p2, .section8 .p3, .section8 .p4, .section8 .p5 {
+  position: absolute;
+  z-index: 3; /* S'assurer que les images sont au-dessus des autres éléments */
+}
+
+.section8 .p1 {
+  top: -3%;
+  left: 19%;
+  width: 16%;
+}
+
+.section8 .p2 {
+  top: -5%;
+  left: 40%;
+  width: 15%;
+}
+
+.section8 .p3 {
+  top: -2%;
+  left: 57%;
+  width: 20%;
+}
+
+.section8 .p4 {
+  top: -5%;
+  left: 70%;
+  width: 15%;
+}
+
+.section8 .p5 {
+  top: 2%;
+  left: 32%;
+  width: 27%;
+}
 
 .background-container {
   position: absolute;
@@ -169,5 +204,6 @@
       margin-top: 20px;
       left: 0;
   }
+  
 }
 

@@ -13,7 +13,7 @@ import fondjaunne from './Pic/fondjaune.png';
 import fondPluriannuelImage from './Pic/Fonds Pluriannuel.png'; 
 import fondReacitifImage from './Pic/Fonds Réactif.png'; 
 import fondInnovationImage from './Pic/Fonds Innovation.png'; 
-
+import pointier from './Pic/pointier.png'
 import description1Image from './Pic/description1.png'; 
 import description2Image from './Pic/description2.png'; 
 import description3Image from './Pic/description3.png'; 
@@ -50,7 +50,9 @@ const Section5 = () => {
   return (
     <section className="section5">
       <div className="background-container">
-        <img src={starImage1} alt="Star 1" className="star-image star1" />
+      <img src={pointier} alt="pointier" className="pointier"  />
+        
+        <img src={starImage1} alt="Star 1" className="star-image star1"  />
         <img src={starImage2} alt="Star 2" className="star-image star2" />
         <img src={backgroundImageRight} alt="Background Right" className="background-image-right"  />
       </div>

@@ -11,7 +11,7 @@ body {
   align-items: center;
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
-  width: 100%; /* Assure que la largeur prend toute la fenêtre */
+  width: 102%; /* Assure que la largeur prend toute la fenêtre */
   overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
