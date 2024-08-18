@@ -1,8 +1,7 @@
 .section-final {
   position: relative;
   width: 100%;
-  height: auto;
-  background-color: #FFEBEB;
+  height: 100%;
 }
 
 /* Image en haut de la page */
@@ -17,9 +16,9 @@
 /* Conteneur de la boîte de dialogue verte */
 .boite-dialogue-container {
   position: absolute;
-  top: 10%;
+  top: 15%; /* Ajusté pour un meilleur positionnement */
   left: 5%;
-  width: 12%;
+  width: 12%; /* Ajusté pour correspondre à la maquette */
   height: auto;
 }
 
@@ -31,9 +30,9 @@
 /* Conteneur de l'image de contact */
 .contact-container {
   position: absolute;
-  top: 15%;
-  left: 50%;
-  width: 35%;
+  top: 10%;
+  left: 60%;
+  width: 25%; /* Ajusté pour correspondre à la maquette */
   height: auto;
 }
 
@@ -44,26 +43,25 @@
 
 /* Texte de contact */
 .text {
-  margin-top: 2%;
+  margin-top: 5%;
   color: #333;
   padding-left: 5%;
-  font-size: 1vw;
-  text-align: left;
+  font-size: 1.2vw; /* Taille de police ajustée */
 }
 
 /* Image pour remplacer la ligne */
 .custom-line-image {
-  width: 70%;
+  width: 50%; /* Ajusté pour mieux correspondre à l'espace disponible */
   height: auto;
-  margin: 3% 0;
+  margin: 2% 0;
 }
 
 /* Conteneur de la troisième image */
 .third-image-container {
   position: absolute;
   top: 50%;
-  left: 5%;
-  width: 30%;
+  left: 10%;
+  width: 15%; /* Ajusté pour une meilleure proportion */
   height: auto;
 }
 
@@ -81,9 +79,9 @@
 /* Conteneur de l'image du bas */
 .bottom-image-container {
   position: absolute;
-  top: 75%;
-  left: 10%;
-  width: 80%;
+  top: 65%;
+  left: 0;
+  width: 100%;
   height: auto;
 }
 
@@ -95,9 +93,9 @@
 /* Conteneur de la nouvelle image en bas */
 .new-bottom-image-container {
   position: absolute;
-  top: 85%;
-  left: 10%;
-  width: 80%;
+  top: 75%;
+  left: 5%;
+  width: 90%; /* Ajusté pour une meilleure proportion */
   height: auto;
 }
 
