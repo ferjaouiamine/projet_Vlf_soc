@@ -133,7 +133,7 @@ const App = () => {
 
       <Section9/>
       <Section10 />
-<SectionFinal/>
+      {/* <SectionFinal/> */}
 
     </div>
   );

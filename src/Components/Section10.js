@@ -1,135 +1,78 @@
 import React from "react";
 import "./Cssfile/Section10.css";
-import Groupe_de_masque1 from "./Pic/Groupe de masques 1.png";
+import backligne from "./Pic/backligne.png"; // Image de fond
+import debutpage from "./Pic/debutpage.png";
 import atfd from "./Pic/Atfd.png";
 import addci from "./Pic/addci.png";
 import atac from "./Pic/Atac.png";
-import rayhana from "./Pic/Rayhana.png";
+import rayhana from "./Pic/rayhana.png";
 import amal from "./Pic/Amal.png";
-import Association from "./Pic/Association des Femmes Pour la Citoyenneté et le Développement  AFPCD  Babouche Ain Draham  Jendouba.png";
-import cawter from "./Pic/Cawtar.png";
+import ASSOCITIONDESFEMMESPOURLACITOYENNETE from "./Pic/ASSOCITIONDESFEMMESPOURLACITOYENNETE copy.png";
+import cawtar from "./Pic/Cawtar.png";
 import essabil from "./Pic/Essabil.png";
 import tigar from "./Pic/Tigar.png";
-import calam from "./Pic/Calam.png";
-import Association2 from "./Pic/Association des femmes pour le développement et l’égalité AFDE Douz (Tataouine).png";
-import Association3 from "./Pic/Association Joussour pour la Citoyenneté Le Kef.png";
-import Association4 from "./Pic/Association du développement alternatif « Attanmia albadila » (Tataouine).png";
-import laligue from "./Pic/La Ligue des Electrices Tunisiennes LET Nabeul et Jendouba.png";
-import Association5 from "./Pic/Association Rayhana Jendouba.png";
-import Association6 from "./Pic/Association du Développement Durable et de la Coopération Internationale ADDCI Zarzis.png";
-import Association7 from "./Pic/Association pour la promotion du Droit à la Différence Bizerte.png";
-import Association8 from "./Pic/Association des jeunes au service des femmes Kasserine.png";
-import asswat from "./Pic/Aswat Nissa.png";
+import calm from "./Pic/Calm.png";
+import circul1_2 from "./Pic/circul1_2.png";
+import ASSOCDEVEL from "./Pic/ASSPCIATIONDESFEMMESDEVEL.png";
+import tirezenmauve from "./Pic/tirezenmauve.png";
+import letoilemauve from "./Pic/letoilemauve.png";
+import associationjoussour from "./Pic/associationjoussour.png";
+import associationalternatif from "./Pic/associationalternatif.png";
+import lestartgauche from "./Pic/lestartgauche.png";
+import lestartdroite from "./Pic/lestartdroite.png";
+import lalignedeselectrice from "./Pic/lalignedeselectrice.png";
+import associationrayhanejandouba from "./Pic/associationrayhanejandouba.png";
+import associationdurable from "./Pic/ASSOCIATIONDURABLEDELA.png";
+import letoilejaunnedroite from "./Pic/letoilejaunnedroite.png";
+import letoilegauche from "./Pic/letoilejaunnegauche.png";
+import associatiopromotion from "./Pic/associatiopromotion.png";
+import associationdesjeunnee from "./Pic/associationdesjeunnee.png";
+import aswatnisa from "./Pic/aswatnisa.png";
+import pointvertegauche from "./Pic/pointvertegauche.png";
 import actif from "./Pic/Actif.png";
-import biety from "./Pic/Beity.png";
-import groupe356 from "./Pic/Groupe 367.png";
-import Groupe364 from "./Pic/Groupe 364.png";
+import pointvertdroite from "./Pic/pointvertdroite.png";
+import beity from "./Pic/Beity.png";
+import associationvision from "./Pic/associationvision.png";
 
-import Association9 from "./Pic/Association Vision pour la citoyenneté et le développement durable kébili.png";
-// import Groupe364 from "./Pic/Groupe 364.png";
-// import rectangle from "./Pic/Rectangle 268.png";
-import pt from "./Pic/Ellipse 15.png";
 const Section10 = () => {
   return (
     <div className="section10">
-      <div className="single-row">
-        <img
-          src={Groupe_de_masque1}
-          alt="Groupe Masques 1"
-          className="groupe-masques1"
-        />
-      </div>
-
-      <div className="group-row">
-        <img src={atfd} alt="ATFD" className="atfd" />
-        <img src={addci} alt="ADDCI" className="addci" />
-        <img src={atac} alt="ATAC" className="atac" />
-        <img src={rayhana} alt="Rayhana" className="rayhana" />
-        <img src={amal} alt="Amal" className="amal" />
-      </div>
-
-      <div className="single-roww">
-        <img src={Association} alt="Association" className="association-wide" />
-      </div>
-
-      <div className="small-images-row">
-        <img src={cawter} alt="Cawter" className="cawter" />
-        <img src={essabil} alt="Essabil" className="essabil" />
-        <img src={tigar} alt="Tigar" className="tigar" />
-        <img src={calam} alt="Calam" className="calam" />
-      </div>
-
-      <div className="container">
-        <div className="association-container">
-          <div className="association-item" id="assoc2">
-            <img
-              src={Association2}
-              alt="Association2"
-              className="association-wide"
-            />
-          </div>
-          <div className="association-item" id="assoc3">
-            <img
-              src={Association3}
-              alt="Association3"
-              className="association-wide"
-            />
-          </div>
-          <div className="association-item" id="assoc4">
-            <img
-              src={Association4}
-              alt="Association4"
-              className="association-wide"
-            />
-            <img src={Groupe364} alt="Left Corner" className="left-corner" />
-            <img src={Groupe364} alt="Right Corner" className="right-corner" />
-          </div>
-          <div className="association-item" id="ligue">
-            <img src={laligue} alt="Laligue" className="association-wide" />
-          </div>
-          <div className="association-item" id="assoc5">
-            <img
-              src={Association5}
-              alt="Association5"
-              className="association-wide"
-            />
-          </div>
-          <div className="association-item" id="assoc6">
-            <img
-              src={Association6}
-              alt="Association6"
-              className="association-small"
-            />
-            <img src={groupe356} alt="Left Corner" className="left-corner" />
-            <img src={groupe356} alt="Right Corner" className="right-corner" />
-          </div>
-          <div className="association-item" id="assoc7">
-            <img
-              src={Association7}
-              alt="Association7"
-              className="association-small"
-            />
-          </div>
-          <div className="association-item" id="assoc8">
-            <img
-              src={Association8}
-              alt="Association8"
-              className="association-small"
-            />
-          </div>
-          <div className="small-images-row2">
-            <img src={asswat} alt="Asswat" className="asswat" />
-            <img src={pt} alt="pt" className="pt" />
-            <img src={actif} alt="Actif" className="actif" />
-            <img src={pt} alt="pt" className="pt" />
-            <img src={biety} alt="Biety" className="biety" />
-          </div>
-        </div>
-        <div className="single-row" id="assoc9">
-        <img src={Association9} alt="Association9" />
-      </div>
-      </div>
-     
+      
+        <img src={backligne} alt="backligne" className="backligne" />
+        {/* Image de fond */}
+      
+      <img src={debutpage} alt="Début de page" className="debutpage" />
+      <img src={atfd} alt="ATFD" className="atfd" />
+      <img src={addci} alt="ADDCI" className="addci" />
+      <img src={atac} alt="ATAC" className="atac" />
+      <img src={rayhana} alt="Rayhana" className="rayhana" />
+      <img src={amal} alt="Amal" className="amal" />
+      <img src={ASSOCITIONDESFEMMESPOURLACITOYENNETE} alt="ASSOCIATION DES FEMMES POUR LA CITOYENNETÉ" className="association-citoyennete" />
+      <img src={cawtar} alt="Cawtar" className="cawtar" />
+      <img src={essabil} alt="Essabil" className="essabil" />
+      <img src={tigar} alt="Tigar" className="tigar" />
+      <img src={calm} alt="Calm" className="calm" />
+      <img src={circul1_2} alt="Circul 1/2" className="circul1_2" />
+      <img src={ASSOCDEVEL} alt="ASSOCDEVEL" className="assocdevel" />
+      <img src={tirezenmauve} alt="Tirez en Mauve" className="tirezenmauve" />
+      <img src={letoilemauve} alt="L'étoile Mauve" className="letoilemauve" />
+      <img src={associationjoussour} alt="Association Joussour" className="association-joussour" />
+      <img src={associationalternatif} alt="Association Alternatif" className="association-alternatif" />
+      <img src={lestartgauche} alt="L'étoile Gauche" className="lestartgauche" />
+      <img src={lestartdroite} alt="L'étoile Droite" className="lestartdroite" />
+      <img src={lalignedeselectrice} alt="La Ligne des Électrices" className="lalignedeselectrice" />
+      <img src={associationrayhanejandouba} alt="Association Rayhana Jandouba" className="association-rayhana-jandouba" />
+      <img src={associationdurable} alt="Association Durable" className="association-durable" />
+      <img src={letoilejaunnedroite} alt="L'étoile Jaune Droite" className="letoilejaunnedroite" />
+      <img src={letoilegauche} alt="L'étoile Gauche" className="letoilegauche" />
+      <img src={associatiopromotion} alt="Association Promotion" className="associatiopromotion" />
+      <img src={associationdesjeunnee} alt="Association des Jeunnee" className="associationdesjeunnee" />
+      <img src={aswatnisa} alt="Aswat Nisa" className="aswatnisa" />
+      <img src={pointvertegauche} alt="Point Vert Gauche" className="pointvertegauche" />
+      <img src={actif} alt="Actif" className="actif" />
+      <img src={pointvertdroite} alt="Point Vert Droite" className="pointvertdroite" />
+      <img src={beity} alt="Beity" className="beity" />
+      <img src={associationvision} alt="Association Vision" className="associationvision" />
     </div>
   );
 };

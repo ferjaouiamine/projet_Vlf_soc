@@ -1,187 +1,313 @@
-/* Ensure red line under each association item */
-.association-item {
-    width: 100%; /* Full width within the container */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    position: relative; /* Allows absolute positioning of corner images */
-    box-sizing: border-box;
-    border-bottom: 0.5vh solid red;
+/* Conteneur de la section */
+.section10 {
+  position: relative;
+  width: 100%;
+  padding: 2%;
+  height: 200vh; /* Augmenté pour s'assurer que tout le contenu s'affiche */
+  font-family: 'Arial', sans-serif;
+}
 
+/* Arrière-plan */
+.backligne {
+  /* background-image: url('./Pic/.backligne'); Image de fond */
+  /* background-size: cover;
+  /* background-position: center; */
+  background-repeat: repeat; 
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 70%;
+  height: 100%;
 
-     /* Red line under each association item */
-  }
-  
-  /* Other styles */
-  .section10,
-  .container {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center all children horizontally */
-    width: 100%;
-    max-width: 1200px; /* Container size remains unchanged */
-    margin: 0 auto; /* Center container */
-    background-color: #f9f9f9;
-    padding: 20px;
+  z-index: 0; /* S'assurer que l'image de fond est derrière les autres éléments */
+}
 
-  }
-  
-  .group-row,
-  .single-roww,
-  .association-item {
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .group-row {
-    gap: 2%; /* Space between images */
-    padding-bottom: 10px;
-    border-bottom: 0.5vh solid red; /* Red line under the images */
-  }
-  
-  .group-row img {
-    max-width: 20%; /* Make images smaller */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .single-roww {
-    padding: 40px 0 20px; /* Padding: Top, Bottom */
-    border-bottom: 0.5vh solid red; /* Red line under the images */
-  }
-  
-  .small-images-row {
-    display: flex;
-    justify-content: center;
-    gap: 2%; /* Space between images */
-    padding: 2% 0; /* Padding: Top, Bottom */
-    border-bottom: 0.5vh solid red; /* Red line under the images */
-  }
-  
-  .small-images-row img {
-    max-width: 23%; /* Make images even smaller */
-    /* max-width: 270px;  Set a maximum width, if needed */
-    height: auto; /* Maintain the aspect ratio */
-  }
-  
-  .container {
-    margin-bottom: 10%; /* Space between containers */
-    position: relative; /* Allows absolute positioning of corner images */
-    padding-bottom: 2%; /* Adjust spacing if needed */
-  }
-  
-  .association-container {
-    display: flex;
-    flex-direction: column; /* Stack associations vertically */
-    width: 100%;
-    max-width: 100%; /* Container size remains unchanged */
-    gap: 2%; /* Space between associations */
-  }
-  
-  #assoc6 img {
-    padding: 0%;
-  }
-  #assoc6 {
-    padding: 0%;
-    position: relative; /* Set this so child elements are positioned relative to this container */
-  }
-  
-  /* Position corner images directly at the bottom corners of the container */
-  .left-corner,
-  .right-corner {
-    position: absolute;
-    bottom: 0; /* Position at the bottom */
-    width: 3.5%; /* Width of corner images */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  /* Left corner image */
-  .left-corner {
-    left: 0; /* Align to the left edge of the container */
-    margin-bottom: 2%;
-    margin-left: 14.9%; /* Remove any margin */
-  }
-  
-  /* Right corner image */
-  .right-corner {
-    right: 0; /* Align to the right edge of the container */
-    margin-bottom: 2%;
-    margin-right: 14.9%; /* Remove any margin */
-  }
-  
-  .association-wide,
-  .association-small {
-    max-width: 80%; /* Scale down the width */
-    height: auto;
-  }
-  
-  #ligue,
-  #assoc5,
-  #assoc4,
-  #assoc3,
-  #assoc7,
-  #assoc8,
-  .small-images-row2 {
-    padding-top: 2%; /* Adjust the padding value as needed */
-    padding-bottom: 2%;
-  }
-  
-  #assoc5 img {
-    max-width: 100%; /* Ensure the image scales up as needed */
-    height: auto; /* Maintain the aspect ratio */
-  }
-  #assoc8 img {
-    max-width: 100%; /* Increase size, adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .small-images-row2 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2%; /* Adjust the spacing between images */
-      border-bottom: 0.5vh solid red; /* Red line under the images */
-      flex-wrap: wrap; /* Allows images to wrap onto the next line if necessary */
-    }
-    
-     .actif, .biety {
-      width: 20%; /* Adjust size as needed; should be larger than pt images */
-      height: auto;
-    }
-    .asswat{
-      width: 45%;
-      height: auto;
-    }
-    .pt {
-      width: 2%; /* Adjust size as needed; should be smaller than the other images */
-      height: auto;
-    }
-    
-    /* Optional: Center pt images with respect to the larger images */
-    .small-images-row2 {
-      position: relative;
-    }
-    
-    .pt {
-      position: relative;
-      margin-top: 5%;
-      margin-bottom: 5%;
-    }
-    
-    #assoc9 {
-      display: flex;
-      justify-content: center; /* Center the content horizontally */
-      align-items: center; /* Center the content vertically, if needed */
-      height: 100%; /* Adjust height as needed */
-      padding: 2%; /* Adjust padding around the container using percentage */
-  
-    }
-    
-    #assoc9 img {
-      width: 100%; /* Adjust the percentage to make the image smaller */
-      height: auto; /* Maintain aspect ratio */
-      max-width: 120%; /* Ensure it doesn't exceed the container's width */
-    }
-    
-  
+/* Styles pour chaque image avec pourcentages */
+
+/* Début de page */
+.debutpage {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 98%;
+  height: auto;
+}
+
+/* ATFD */
+.atfd {
+  position: absolute;
+  top: 13%;
+  left: 15%;
+  width: 10%;
+  height: auto;
+}
+
+/* ADDCI */
+.addci {
+  position: absolute;
+  top: 13%;
+  left: 28%;
+  width: 12%;
+  height: auto;
+}
+
+/* ATAC */
+.atac {
+  position: absolute;
+  top: 13%;
+  left: 44%;
+  width: 10%;
+  height: auto;
+}
+
+/* Rayhana */
+.rayhana {
+  position: absolute;
+  top: 14%;
+  left: 56%;
+  width: 15%;
+  height: auto;
+}
+
+/* Amal */
+.amal {
+  position: absolute;
+  top: 13%;
+  left: 73%;
+  width: 12%;
+  height: auto;
+}
+
+/* Association Citoyenneté */
+.association-citoyennete {
+  position: absolute;
+  top: 23%;
+  left: 15%;
+  width: 67%;
+  height: auto;
+}
+
+/* Cawtar */
+.cawtar {
+  position: absolute;
+  top: 32%;
+  left: 15%;
+  width: 15%;
+  height: auto;
+}
+
+/* Essabil */
+.essabil {
+  position: absolute;
+  top: 32%;
+  left: 32%;
+  width: 15%;
+  height: auto;
+}
+
+/* Tigar */
+.tigar {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  width: 12%;
+  height: auto;
+}
+
+/* Calm */
+.calm {
+  position: absolute;
+  top: 32%;
+  left: 65%;
+  width: 15%;
+  height: auto;
+}
+
+/* Circul 1/2 */
+.circul1_2 {
+  position: absolute;
+  top: 34%;
+  left: 80%;
+  width: 3%;
+  height: auto;
+}
+
+/* Association de Développement */
+.assocdevel {
+  position: absolute;
+  top: 41%;
+  left: 17%;
+  width: 66%;
+  height: auto;
+}
+
+/* Tirez en Mauve */
+.tirezenmauve {
+  position: absolute;
+  top: 47%;
+  left: 18%;
+  width: 3%;
+  height: auto;
+}
+
+/* L'étoile Mauve */
+.letoilemauve {
+  position: absolute;
+  top: 46%;
+  left: 22%;
+  width: 2%;
+  height: auto;
+}
+
+/* Association Joussour */
+.association-joussour {
+  position: absolute;
+  top: 54%;
+  left: 14%;
+  width: 70%;
+  height: auto;
+}
+
+/* Association Alternatif */
+.association-alternatif {
+  position: absolute;
+  top: 60%;
+  left: 17%;
+  width: 60%;
+  height: auto;
+}
+
+/* L'étoile Gauche */
+.lestartgauche {
+  position: absolute;
+  top: 66%;
+  left: 19%;
+  width: 2%;
+  height: auto;
+}
+
+/* L'étoile Droite */
+.lestartdroite {
+  position: absolute;
+  top: 66%;
+  left: 72%;
+  width: 2%;
+  height: auto;
+}
+
+/* La Ligne des Électrices */
+.lalignedeselectrice {
+  position: absolute;
+  top: 72%;
+  left: 15%;
+  width: 68%;
+  height: auto;
+}
+
+/* Association Rayhana Jandouba */
+.association-rayhana-jandouba {
+  position: absolute;
+  top: 77%;
+  left: 17%;
+  width: 66%;
+  height: auto;
+}
+
+/* Association Durable */
+.association-durable {
+  position: absolute;
+  top: 86%;
+  left: 15%;
+  width: 70%;
+  height: auto;
+}
+
+/* L'étoile Jaune Droite */
+.letoilejaunnedroite {
+  position: absolute;
+  top: 91%;
+  left: 78%;
+  width: 2%;
+  height: auto;
+}
+
+/* L'étoile Gauche */
+.letoilegauche {
+  position: absolute;
+  top: 91%;
+  left: 20%;
+  width: 2%;
+  height: auto;
+}
+
+/* Association Promotion */
+.associatiopromotion {
+  position: absolute;
+  top: 97%;
+  left: 16%;
+  width: 62%;
+  height: auto;
+}
+
+/* Association des Jeunnee */
+.associationdesjeunnee {
+  position: absolute;
+  top: 106%;
+  left: 15%;
+  width: 70%;
+  height: auto;
+}
+
+/* Aswat Nisa */
+.aswatnisa {
+  position: absolute;
+  top: 111%;
+  left: 16%;
+  width: 24%;
+  height: auto;
+}
+
+/* Point Vert Gauche */
+.pointvertegauche {
+  position: absolute;
+  top: 114%;
+  left: 41%;
+  width: 1%;
+  height: auto;
+}
+
+/* Actif */
+.actif {
+  position: absolute;
+  top: 110%;
+  left: 44%;
+  width: 11%;
+  height: auto;
+}
+
+/* Point Vert Droite */
+.pointvertdroite {
+  position: absolute;
+  top: 114%;
+  left: 59%;
+  width: 1%;
+  height: auto;
+}
+
+/* Beity */
+.beity {
+  position: absolute;
+  top: 110%;
+  left: 62%;
+  width: 12%;
+  height: auto;
+}
+
+/* Association Vision */
+.associationvision {
+  position: absolute;
+  top: 120%;
+  left: 14%;
+  width: 70%;
+  height: auto;
+}

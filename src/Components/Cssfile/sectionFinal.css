@@ -1,85 +1,107 @@
-/* Conteneur principal */
-.full-width-image-container {
+.section-final {
   position: relative;
   width: 100%;
-  background-color: #f4e5e6; /* Couleur de fond si nécessaire */
+  height: auto;
+  background-color: #FFEBEB;
 }
 
-/* Image de fond plein écran */
-.full-width-image {
+/* Image en haut de la page */
+.image-haut-page {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: auto;
-  display: block;
 }
 
-/* Deuxième image et texte */
-.second-image-and-text {
-  /* Vous pouvez positionner ce conteneur où vous le souhaitez */
-  text-align: center;
+/* Conteneur de la boîte de dialogue verte */
+.boite-dialogue-container {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 12%;
+  height: auto;
+}
+
+.boite-dialogue-verte {
+  width: 100%;
+  height: auto;
+}
+
+/* Conteneur de l'image de contact */
+.contact-container {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  width: 35%;
+  height: auto;
 }
 
 .second-image {
-  width: 100px; /* Vous pouvez ajuster la taille ici */
+  width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
+/* Texte de contact */
 .text {
-  font-family: Arial, sans-serif;
-  color: #654284; /* Ajuster selon votre design */
-  margin-top: 10px;
+  margin-top: 2%;
+  color: #333;
+  padding-left: 5%;
+  font-size: 1vw;
+  text-align: left;
 }
 
-.custom-line {
-  width: 50%;
-  border: 1px solid #39b549; /* Couleur verte */
-  margin: 10px auto;
+/* Image pour remplacer la ligne */
+.custom-line-image {
+  width: 70%;
+  height: auto;
+  margin: 3% 0;
 }
 
-/* Troisième image (ligne verte) */
+/* Conteneur de la troisième image */
 .third-image-container {
-  /* Vous pouvez positionner ce conteneur où vous le souhaitez */
-}
-
-.additional-image, .third-image {
-  max-width: 150px; /* Ajustez la taille ici */
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 30%;
   height: auto;
 }
 
-/* Image en bas */
+.additional-image {
+  width: 100%;
+  height: auto;
+}
+
+.third-image {
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+}
+
+/* Conteneur de l'image du bas */
 .bottom-image-container {
-  /* Vous pouvez positionner ce conteneur où vous le souhaitez */
+  position: absolute;
+  top: 75%;
+  left: 10%;
+  width: 80%;
+  height: auto;
 }
 
 .bottom-image {
   width: 100%;
   height: auto;
-  display: block;
 }
 
-/* Nouvelle image en bas */
+/* Conteneur de la nouvelle image en bas */
 .new-bottom-image-container {
-  /* Vous pouvez positionner ce conteneur où vous le souhaitez */
+  position: absolute;
+  top: 85%;
+  left: 10%;
+  width: 80%;
+  height: auto;
 }
 
 .new-bottom-image {
   width: 100%;
   height: auto;
-  display: block;
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-  .second-image {
-      width: 80px; /* Réduire la taille sur mobile si nécessaire */
-  }
-
-  .custom-line {
-      width: 70%; /* Ajustement pour les petits écrans */
-  }
-
-  .additional-image, .third-image {
-      max-width: 120px; /* Réduction de la taille des images */
-  }
 }
