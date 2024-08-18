@@ -5,7 +5,7 @@ import debutpage from "./Pic/debutpage.png";
 import atfd from "./Pic/Atfd.png";
 import addci from "./Pic/addci.png";
 import atac from "./Pic/Atac.png";
-import rayhana from "./Pic/rayhana.png";
+import rayhana from "./Pic/rayhana/rayhana.png";
 import amal from "./Pic/Amal.png";
 import ASSOCITIONDESFEMMESPOURLACITOYENNETE from "./Pic/ASSOCITIONDESFEMMESPOURLACITOYENNETE copy.png";
 import cawtar from "./Pic/Cawtar.png";
