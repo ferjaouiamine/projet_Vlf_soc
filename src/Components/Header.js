@@ -9,8 +9,8 @@ import image2deuxcote from './Pic/,,.png';
 import image3points3 from './Pic/….png';
 import image4bagettever from './Pic/Groupe 145.png';
 import image5serpon from './Pic/Groupe 25.png';
-import image6serpon from './Pic/Groupe 25.png';
-
+import image6serpon from './Pic/serpondroite.png';
+import etoilejaune from './Pic/etoilepetite.png';
 import ellesImage from './Pic/Elles   étaient.png'; 
 import uneImage from './Pic/Une      fois.png'; 
 
@@ -18,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HeaderSection = () => {
   useEffect(() => {
+    
     const isMobile = window.innerWidth <= 767;
 
     if (isMobile) {
@@ -132,9 +133,12 @@ const HeaderSection = () => {
       </div>
 
       <div className="header-content">
+
         <div className="left-text">
           <div className="text-group">
+
             <img src={ellesImage} alt="Elles" className="left-text" />
+
           </div>
         </div>
         <div className="right-text">

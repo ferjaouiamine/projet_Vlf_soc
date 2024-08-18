@@ -45,6 +45,7 @@
   right: 2%;
   width: 52%;
 }
+
 /* Positioning and Sizing for other images - responsive */
 .image1 {
   height: 101%;
@@ -80,12 +81,11 @@
 .image5 {
   height: 160%;
   width: 72%;
-  top: 226%;
+  top: 224%;
   right: 51%;
   transform: translate(50%, -50%);
   z-index: -1;
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
+  opacity: 1;
 }
 .image6 {
   height: 10%;

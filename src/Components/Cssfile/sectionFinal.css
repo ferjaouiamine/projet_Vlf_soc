@@ -1,24 +1,38 @@
 .section-final {
+  margin-top: 30%;
   position: relative;
   width: 100%;
+  height: 100vh;
+  background-color: #FEE8E8;
+}
+
+/* Image de fond de la section */
+.background-imagesfinal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /* Image en haut de la page */
 .image-haut-page {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: -4%; /* Ajustez comme nécessaire */
+  left: 50%; /* Ajustez comme nécessaire */
+  width: 100%; /* Ajustez comme nécessaire */
   height: auto;
+  transform: translateX(-50%);
 }
 
 /* Conteneur de la boîte de dialogue verte */
 .boite-dialogue-container {
   position: absolute;
-  top: 15%; /* Ajusté pour un meilleur positionnement */
-  left: 5%;
-  width: 12%; /* Ajusté pour correspondre à la maquette */
+  top: 13%; /* Ajustez comme nécessaire */
+  left: 26%; /* Ajustez comme nécessaire */
+  width: 7%; /* Ajustez comme nécessaire */
   height: auto;
 }
 
@@ -30,9 +44,9 @@
 /* Conteneur de l'image de contact */
 .contact-container {
   position: absolute;
-  top: 10%;
-  left: 60%;
-  width: 25%; /* Ajusté pour correspondre à la maquette */
+  top: 15%; /* Ajustez comme nécessaire */
+  left: 12%; /* Ajustez comme nécessaire */
+  width: 20%; /* Ajustez comme nécessaire */
   height: auto;
 }
 
@@ -43,15 +57,17 @@
 
 /* Texte de contact */
 .text {
-  margin-top: 5%;
+  left: 290%;
+  margin-top: -50%;
   color: #333;
-  padding-left: 5%;
-  font-size: 1.2vw; /* Taille de police ajustée */
+  font-size: 1.5vw;
+  line-height: 1.2;
+  position: relative;
 }
 
 /* Image pour remplacer la ligne */
 .custom-line-image {
-  width: 50%; /* Ajusté pour mieux correspondre à l'espace disponible */
+  width: 10%;
   height: auto;
   margin: 2% 0;
 }
@@ -59,19 +75,20 @@
 /* Conteneur de la troisième image */
 .third-image-container {
   position: absolute;
-  top: 50%;
-  left: 10%;
-  width: 15%; /* Ajusté pour une meilleure proportion */
+  top: 35%; /* Ajustez comme nécessaire */
+  left: 50%; /* Ajustez comme nécessaire */
+  width: 15%; /* Ajustez comme nécessaire */
   height: auto;
 }
 
 .additional-image {
-  width: 100%;
+  width: 96%;
+  margin-left: -76%;
   height: auto;
 }
 
 .third-image {
-  width: 100%;
+  width: 80%;
   height: auto;
   margin-top: 2%;
 }
@@ -79,9 +96,9 @@
 /* Conteneur de l'image du bas */
 .bottom-image-container {
   position: absolute;
-  top: 65%;
-  left: 0;
-  width: 100%;
+  top: 50%; /* Ajustez comme nécessaire */
+  left: 30%; /* Ajustez comme nécessaire */
+  width: 50%; /* Ajustez comme nécessaire */
   height: auto;
 }
 
@@ -93,9 +110,9 @@
 /* Conteneur de la nouvelle image en bas */
 .new-bottom-image-container {
   position: absolute;
-  top: 75%;
-  left: 5%;
-  width: 90%; /* Ajusté pour une meilleure proportion */
+  top: 85%; /* Ajustez comme nécessaire */
+  left: 0%; /* Ajustez comme nécessaire */
+  width: 100%; /* Ajustez comme nécessaire */
   height: auto;
 }
 
