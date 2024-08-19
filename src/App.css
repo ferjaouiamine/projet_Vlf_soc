@@ -81,9 +81,9 @@ body {
 
 .image-overlay img {
   width: 30%;
-  height: auto;
+  height: 450%;
   position: absolute;
-  top: -100%;
+  top: -157%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
