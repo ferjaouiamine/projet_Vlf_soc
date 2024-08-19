@@ -12,7 +12,6 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
   width: 102%; /* Assure que la largeur prend toute la fenêtre */
-  overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 .header-section {

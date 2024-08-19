@@ -18,8 +18,11 @@ const Section1 = () => {
   
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Durée de l'animation
+      duration: 1200, 
+      once: true,     // L'animation se déclenche une seule fois
+      offset: 50, 
     });
+    AOS.refresh(); 
   }, []);
   
   return (
@@ -73,8 +76,7 @@ const Section1 = () => {
             src={retrouvezLeur} 
             alt="Retrouvez leur voyage" 
             className="retrouvez-leur-image" 
-          data-aos-delay="2600"
-
+            data-aos-delay="2600"
           />
         </div>
         <img 
@@ -110,7 +112,7 @@ const Section1 = () => {
           alt="Arrow Down" 
           className="arrow-down" 
           data-aos="fade-up" 
-          data-aos-delay="5000" 
+          data-aos-delay="4000" 
         />
         <div 
           className="button-container" 
@@ -118,8 +120,7 @@ const Section1 = () => {
           data-aos-delay="5000"
         >
 
-                    <a   href="#pdf" className="download-button"  >
-            
+          <a href="#pdf" className="download-button">
             JE TÉLÉCHARGE LE LIVRE D’ART EN PDF
           </a>
         </div>
@@ -129,7 +130,7 @@ const Section1 = () => {
         alt="flecheflower" 
         className="flechflower" 
         data-aos="fade-up" 
-        data-aos-delay="5500" 
+        data-aos-delay="4500" 
       />
     </section>
   );
